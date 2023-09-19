@@ -1,0 +1,930 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>秋招公司总结 | Jun</title><meta name="author" content="🌶辣椒炒饭"><meta name="copyright" content="🌶辣椒炒饭"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="# 公司概况 # 合合信息 笔试题还未找到。。 # 用友软件 1.@Autowired 和 @Resource 有什么区别，@Autowired 怎么根据 name 注入 2. 从配置文件注入属性的注解，有没有遇到过 @Value 注入的时候注入不进来的情况 3. 经典面试题：输入 URL 到页面显示的整个流程 4. 有没有遇到过 @RequestMapping 写的接口，断点在第一行，debug">
+<meta property="og:type" content="article">
+<meta property="og:title" content="秋招公司总结">
+<meta property="og:url" content="https://github.com/hacker-jun/666.github.io/2023/09/19/%E7%A7%8B%E6%8B%9B%E5%85%AC%E5%8F%B8%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Jun">
+<meta property="og:description" content="# 公司概况 # 合合信息 笔试题还未找到。。 # 用友软件 1.@Autowired 和 @Resource 有什么区别，@Autowired 怎么根据 name 注入 2. 从配置文件注入属性的注解，有没有遇到过 @Value 注入的时候注入不进来的情况 3. 经典面试题：输入 URL 到页面显示的整个流程 4. 有没有遇到过 @RequestMapping 写的接口，断点在第一行，debug">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/hacker-jun/666.github.io/img/f4aa9cd4d88b8eda7d695ba4f1c6cbb0_1.jpg">
+<meta property="article:published_time" content="2023-09-19T10:44:27.000Z">
+<meta property="article:modified_time" content="2023-09-19T10:44:32.643Z">
+<meta property="article:author" content="🌶辣椒炒饭">
+<meta property="article:tag" content="Java Python Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/hacker-jun/666.github.io/img/f4aa9cd4d88b8eda7d695ba4f1c6cbb0_1.jpg"><link rel="shortcut icon" href="/666.github.io/img/web.png"><link rel="canonical" href="https://github.com/hacker-jun/666.github.io/2023/09/19/%E7%A7%8B%E6%8B%9B%E5%85%AC%E5%8F%B8%E6%80%BB%E7%BB%93/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/666.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/666.github.io/%E9%9B%A8%E7%9C%A0%E4%B9%8B%E9%9F%B3" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/666.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '秋招公司总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-19 18:44:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/666.github.io/img/f4aa9cd4d88b8eda7d695ba4f1c6cbb0_1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/666.github.io/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/666.github.io/tags/"><div class="headline">标签</div><div class="length-num">30</div></a><a href="/666.github.io/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/666.github.io/"><i class="fa-fw fas fa-mosque"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/archives/"><i class="fa-fw fas fa-pencil-alt"></i><span> 档案</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/666.github.io/img/wallhaven-28rvdg.jpg')"><nav id="nav"><span id="blog-info"><a href="/666.github.io/" title="Jun"><span class="site-name">Jun</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/666.github.io/"><i class="fa-fw fas fa-mosque"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/archives/"><i class="fa-fw fas fa-pencil-alt"></i><span> 档案</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/666.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">秋招公司总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-19T10:44:27.000Z" title="发表于 2023-09-19 18:44:27">2023-09-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-19T10:44:32.643Z" title="更新于 2023-09-19 18:44:32">2023-09-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="秋招公司总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="公司概况"><a class="markdownIt-Anchor" href="#公司概况">#</a> 公司概况</h1>
+<h2 id="合合信息"><a class="markdownIt-Anchor" href="#合合信息">#</a> 合合信息</h2>
+<p>笔试题还未找到。。</p>
+<h2 id="用友软件"><a class="markdownIt-Anchor" href="#用友软件">#</a> 用友软件</h2>
+<p>1.@Autowired 和 @Resource 有什么区别，@Autowired 怎么根据 name 注入</p>
+<p>2. 从配置文件注入属性的注解，有没有遇到过 @Value 注入的时候注入不进来的情况</p>
+<p>3. 经典面试题：输入 URL 到页面显示的整个流程</p>
+<p>4. 有没有遇到过 @RequestMapping 写的接口，断点在第一行，debug 时候第一行都没进去的情况，怎么解决？</p>
+<p>5. 为什么 TCP 要三次握手，两次不行</p>
+<p>6. 说一下 HTTP 的理解，协议属性、安不安全、常用 method、报文头报文体的字段</p>
+<p>7.get 和 post 的区别，URL 长度限制，post 和 put 有什么区别</p>
+<p>8. 数据库三范式</p>
+<p>9. 爱好可以存一个字符串，爱好直接拼接起来和爱好单独存一个表的区别</p>
+<p>10. 执行计划怎么分析，怎么优化 SQL</p>
+<h2 id="大华股份"><a class="markdownIt-Anchor" href="#大华股份">#</a> 大华股份</h2>
+<h2 id="中兴软件"><a class="markdownIt-Anchor" href="#中兴软件">#</a> 中兴软件</h2>
+<h3 id="对于n个互不相同的符号进行哈夫曼编码若生成的哈夫曼树共有35个结点则n的值为"><a class="markdownIt-Anchor" href="#对于n个互不相同的符号进行哈夫曼编码若生成的哈夫曼树共有35个结点则n的值为">#</a> 对于 n 个互不相同的符号进行哈夫曼编码，若生成的哈夫曼树共有 35 个结点，则 n 的值为？</h3>
+<p>哈夫曼树的特点性质：（节点为的度数为 0 表示 n0, 以此类推）<br>
+①哈夫曼树中只存在度为 2 和度为 0 的节点，及 n1=0。<br>
+②哈夫曼树中，度为 0 和度为 2 的节点关系：n2=n0-1</p>
+<p>由以上两个性质，本题就很好解出答案：<br>
+n0+n2=35 =&gt;<br>
+n0+n0-1=35 =&gt;<br>
+n0=(35+1)/2=18</p>
+<h3 id="sql中count和sum的区别"><a class="markdownIt-Anchor" href="#sql中count和sum的区别">#</a> SQL 中 COUNT 和 SUM 的区别</h3>
+<p>count 统计函数，</p>
+<p>sum 关注的是数值列的总和。</p>
+<h2 id="浩鲸科技"><a class="markdownIt-Anchor" href="#浩鲸科技">#</a> 浩鲸科技</h2>
+<h3 id="与事务控制相关的语句"><a class="markdownIt-Anchor" href="#与事务控制相关的语句">#</a> 与事务控制相关的语句</h3>
+<p>事务控制通常涉及以下语句：</p>
+<ol>
+<li><strong>BEGIN TRANSACTION</strong>：此语句用于开启一个新的事务。在事务开始之后，所有的数据库操作都包含在该事务中，直到显式地停止该事务。</li>
+<li><strong>COMMIT</strong>：此语句用于提交事务。在提交事务之后，所有的数据库操作将被永久地保存到数据库中。</li>
+<li><strong>ROLLBACK</strong>：此语句用于回滚事务。在回滚事务之后，所有的数据库操作将被撤销，数据库状态将回到事务开始之前的状态。</li>
+<li><strong>SAVEPOINT</strong>：此语句用于在事务中创建一个保存点。如果在事务中需要回滚操作，可以使用 SAVEPOINT 来只回滚一部分操作。</li>
+<li><strong>RELEASE SAVEPOINT</strong>：此语句用于删除一个保存点。当不再需要一个保存点时，可以使用此语句将其删除。</li>
+<li><strong>ROLLBACK TO SAVEPOINT</strong>：此语句用于回滚到指定的保存点。如果在事务中某个操作需要回滚，但不想回滚整个事务，可以使用此语句回滚到指定的保存点。</li>
+</ol>
+<p>这些语句用于控制数据库事务的流程，确保数据的完整性和一致性。</p>
+<h3 id="索引为什么不能直接从select语句中引用"><a class="markdownIt-Anchor" href="#索引为什么不能直接从select语句中引用">#</a> 索引为什么不能直接从 select 语句中引用</h3>
+<p>在 SELECT 语句中引用索引可能会导致查询优化器做出不正确的决策，因为它可能无法正确评估使用索引是否会提高查询性能。</p>
+<h3 id="隐式提交事务的操作命令有"><a class="markdownIt-Anchor" href="#隐式提交事务的操作命令有">#</a> 隐式提交事务的操作命令有？</h3>
+<p>这里详细列举这些命令：</p>
+<ol>
+<li>create：用于创建新的数据库对象，如表、视图、存储过程等。</li>
+<li>drop：用于删除数据库中的对象，如表、视图、存储过程等。</li>
+<li>alter：用于修改表的结构，如添加、修改或删除列。</li>
+<li>grant：用于授予用户对数据库的权限，如读取、写入或执行存储过程等。</li>
+<li>revoke：用于撤销用户对数据库的权限。</li>
+<li>exit：用于退出 sqlplus。</li>
+</ol>
+<p>这些命令在执行时会自动提交以前的所有更新操作，无需手动提交。需要注意的是，这些命令只适用于某些特定的数据库管理系统，不同的系统可能会有不同的命令来实现隐式提交操作。</p>
+<h3 id="关于arraylist初始化指定容量为10在添加第11个元素时会发生什么"><a class="markdownIt-Anchor" href="#关于arraylist初始化指定容量为10在添加第11个元素时会发生什么">#</a> 关于 ArrayList，初始化指定容量为 10，在添加第 11 个元素时，会发生什么？</h3>
+<p>当你创建一个具有特定容量的  <code>ArrayList</code> （例如，通过使用  <code>new ArrayList&lt;&gt;(10)</code>  来初始化一个具有 10 个元素的  <code>ArrayList</code> ），然后尝试添加第 11 个元素时，会发生以下情况：</p>
+<ol>
+<li>如果该  <code>ArrayList</code>  还没有被使用，即其当前容量足以容纳新元素，那么新元素就会被添加到  <code>ArrayList</code>  中。</li>
+<li>如果  <code>ArrayList</code>  已经被完全使用（即所有当前可用的空间都已经被使用），那么  <code>ArrayList</code>  的容量将会自动增加。默认情况下，每次  <code>ArrayList</code>  达到其容量极限时，它的容量会翻倍。因此，当你添加第 11 个元素时，  <code>ArrayList</code>  的容量将会自动增加到至少 20。</li>
+</ol>
+<p>这种自动扩容的过程是  <code>ArrayList</code>  的内部处理，对于大多数应用来说是透明的。你只需要关注如何添加元素就可以了，  <code>ArrayList</code>  会自动处理其内部数据的扩容。</p>
+<p>需要注意的是，虽然  <code>ArrayList</code>  会自动扩容以容纳更多的元素，但这并不意味着你可以无限制地向  <code>ArrayList</code>  中添加元素。如果你添加的元素超过了  <code>ArrayList</code>  的最大容量（即数组的最大大小，由  <code>Integer.MAX_VALUE</code>  决定），那么将会抛出  <code>OutOfMemoryError</code> 。</p>
+<h3 id="冯诺伊曼体系结构的理解"><a class="markdownIt-Anchor" href="#冯诺伊曼体系结构的理解">#</a> 冯诺伊曼体系结构的理解</h3>
+<p>冯・诺伊曼体系结构，也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。这种体系结构是遵循图灵机的设计和冯・诺伊曼提出的计算机系统设计的五个基本部分构建的。</p>
+<p>根据这种结构，计算机的程序和数据都存储在同一个存储器中，即内存。指令和数据可以同时被取出，放入寄存器进行相应的计算，然后再送回内存。因此，这种结构的特点是 “程序存储，共享数据”。</p>
+<p>具体来说，冯・诺伊曼体系结构有以下特点：</p>
+<ol>
+<li>单处理机结构：机器以运算器为中心。</li>
+<li>采用程序存储思想：程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置，因此程序指令和数据的宽度相同。</li>
+<li>指令和数据一样可以参与运算。</li>
+<li>数据以二进制表示。</li>
+<li>将软件和硬件完全分离：这种分离使得程序设计变得更加灵活，对机器硬件的设计也更加容易。</li>
+<li>指令由操作码和操作数组成：操作码指定了指令要执行的操作类型，操作数则给出了操作的对象。</li>
+<li>指令顺序执行：这是冯・诺伊曼体系结构的一个主要特点，即指令按照顺序一条一条地执行。</li>
+</ol>
+<p>然而，这种结构也存在一些局限性。例如，由于 CPU 与共享存储器间的信息交换速度成为影响系统性能的主要因素，因此信息交换速度的提高又受制于存储元件的速度、存储器的性能和结构等诸多条件。</p>
+<p>总的来说，冯・诺伊曼体系结构是一种经典的计算机体系结构，它奠定了现代计算机的基础，几乎所有的现代计算机都遵循这种结构。</p>
+<hr>
+<h2 id="联想"><a class="markdownIt-Anchor" href="#联想">#</a> 联想</h2>
+<p>22 届联想笔试题</p>
+<p>9.2 日</p>
+<h3 id="java-io体系中read方法从输入流中顺序读取源中的单个字节数据如果未达到源的末尾该方法返回什么"><a class="markdownIt-Anchor" href="#java-io体系中read方法从输入流中顺序读取源中的单个字节数据如果未达到源的末尾该方法返回什么">#</a> Java IO 体系中，read 方法从输入流中顺序读取源中的单个字节数据，如果未达到源的末尾，该方法返回什么？</h3>
+<p>答：返回 - 1，表示到达源的末尾，这是一个参数，表示没有任何更多的数据可读了。</p>
+<h3 id="java-io体系中通常情况下以下哪个类可用来读取文件且产生的系统调用可能是最少的"><a class="markdownIt-Anchor" href="#java-io体系中通常情况下以下哪个类可用来读取文件且产生的系统调用可能是最少的">#</a> Java IO 体系中，通常情况下以下哪个类可用来读取文件且产生的系统调用可能是最少的？</h3>
+<p>优先选择 BufferedInputstream</p>
+<p>可以使用 FileInputStream 并不代表这是最佳的选择，在某种情况下，比如处理大型文件或者需要高效处理大量数据的情况下，可能需要考虑使用其它类。比如 BufferedInputStream 或者 FileChannel。这些类提供了更高级的缓冲和 I/O 操作，可以提高读取和写入文件的效率。</p>
+<h3 id="java-io操作中什么方法可以直接将缓冲中的数据立即发送到网络中"><a class="markdownIt-Anchor" href="#java-io操作中什么方法可以直接将缓冲中的数据立即发送到网络中">#</a> Java IO 操作中，什么方法可以直接将缓冲中的数据立即发送到网络中？</h3>
+<p>在 IO 中，可以使用 flush () 方法将缓冲区的数据立即发送的网络中，flush () 方法会强制将所有有缓冲的数据输出字节发送到目标处。原因是在内存中的缓存极有可能被丢失，所以在写入重要数据后，通常需要使用 flush () 方法确保数据被发送到目标处。</p>
+<h3 id="以下代码执行结果"><a class="markdownIt-Anchor" href="#以下代码执行结果">#</a> 以下代码执行结果</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> TestJava;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @Author: jun</span></span><br><span class="line"><span class="comment"> * @Date:2023/9/3 18:58</span></span><br><span class="line"><span class="comment"> * @概述：</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LXXZtest01</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">num1</span> <span class="operator">=</span> <span class="number">200</span> ;</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">num2</span> <span class="operator">=</span> <span class="number">200</span> ;</span><br><span class="line">        <span class="keyword">if</span> (num1 != num2) &#123;</span><br><span class="line">            System.out.println(<span class="number">1</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!num1.equals(num2)) &#123;</span><br><span class="line">            System.out.println(<span class="number">3</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="number">4</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先对于这里的情况，尽管 num1 和 num2 都是 200，但它们是两个不同的对象。因为在 Java 中，对基本数据类型的包装类（如 Integer，Double 等）使用 “==” 运算符比较的是对象的引用是否相等，而非值是否相等。所以这里 num1 != num2 为真，程序会输出 1。</p>
+<p>其次，在第二个 if 语句中，使用 Object 类的 equals 方法来比较两个 Integer 对象，因为 Integer 类是继承自 Object 类，所以它重写了 Object 类的 equals 方法。在 Integer 类中，equals 方法被重写为比较两个整数的值是否相等。因此，num1.equals (num2) 为真，程序会输出 4。</p>
+<h3 id="java中的转义字符分类"><a class="markdownIt-Anchor" href="#java中的转义字符分类">#</a> Java 中的转义字符分类</h3>
+<p>1、 双引号（&quot;&quot;) : 转义字符&quot; 表示字符串中的双引号。一般用作字符串的定义</p>
+<p>2、 单引号 （’ '）: 转义字符  ’ 表示字符字面值。例如：char myChar = ‘’</p>
+<p>3、 反斜杠 （ \ )：用来表示特殊的字符，\n 表示换行符，\t 表示制表符</p>
+<p>4、 双反斜杠 \ \ : 表示转义符本身。</p>
+<h3 id="以下初始化的方法错误的是"><a class="markdownIt-Anchor" href="#以下初始化的方法错误的是">#</a> 以下初始化的方法错误的是</h3>
+<p>A</p>
+<p>Map&lt;Integer, Byte&gt; hashMap = new HashMap&lt;Integer, Byte&gt;();</p>
+<p>B</p>
+<p>Set<String> setStr = new Set<String>();</p>
+<p>C</p>
+<p>List<Integer> arrayList = new ArrayList<Integer>();</p>
+<p>D</p>
+<p>List<Byte> linkedList = new LinkedList<Byte>();</p>
+<p>答案是：B</p>
+<p>set 是 Set 集合的根接口，不能被实例化，只能实例它的实现类 HashSet，LinkedHashSet,TreeSet.</p>
+<h3 id="java-new对象实例通常存在以下哪个内存区域"><a class="markdownIt-Anchor" href="#java-new对象实例通常存在以下哪个内存区域">#</a> Java new 对象实例通常存在以下哪个内存区域？</h3>
+<p>使用 new 关键字创建新的对象实例时，这个对象一般会在 Java 堆内存区域中，堆是 Java 内存管理的主要区域，它用于动态分配内存，用来存储实例对象。</p>
+<p>堆（Heap)：用来动态分配内存的主要区域，当使用 new 关键字来创建一个对象时，新创建的对象就会被放在堆内存中，对是一个非常大的内存区域，它的大小可以通过 -Xmx 和 -Xms JVM 参数来控制。</p>
+<h3 id="java中关于this和super的说法"><a class="markdownIt-Anchor" href="#java中关于this和super的说法">#</a> Java 中，关于 this () 和 super () 的说法</h3>
+<p>this () 用于调用同一个类的其它构造函数</p>
+<p>super () 用于调用父类的构造函数。</p>
+<h3 id="在java中我们所讲的本地接口书写程序或者本地方法接口指的是"><a class="markdownIt-Anchor" href="#在java中我们所讲的本地接口书写程序或者本地方法接口指的是">#</a> 在 Java 中，我们所讲的本地接口书写程序或者本地方法接口指的是</h3>
+<p>在 Java 中，本地方法接口（Native Method Interface）通常指的是 Java 程序与本地 C 或 C++ 代码之间的接口。本地方法接口允许 Java 程序调用在本地代码中定义的函数和方法。</p>
+<p>本地方法接口是通过 Java Native Interface（JNI）来实现的。JNI 是 Java 平台的一部分，它提供了一组 API，用于在 Java 应用程序中调用本地代码。通过 JNI，Java 程序可以访问操作系统 API、硬件和其他底层资源。</p>
+<p>在本地方法接口中，Java 程序使用 Java 数据类型和 Java 方法，而本地代码则使用本地数据类型和本地方法。为了使 Java 程序能够调用本地代码，需要编写一个本地方法声明（通常是一个头文件），该声明描述了本地方法的名称、参数和返回类型。然后，可以使用 JNI API 将 Java 程序与本地代码连接起来。</p>
+<p>使用本地方法接口可以实现高性能的 Java 应用程序，例如在视频处理、图形渲染和游戏开发等领域中。但是，编写和调试本地代码需要更多的工作量和技术能力。</p>
+<h3 id="以下代码输出结果是"><a class="markdownIt-Anchor" href="#以下代码输出结果是">#</a> 以下代码输出结果是？</h3>
+<h3 id="类加载问题"><a class="markdownIt-Anchor" href="#类加载问题">#</a> 类加载问题</h3>
+<p>问题：</p>
+<p>类定义源码如下:  package com.lenovo.school.recruitment.project</p>
+<p>public class ClassFinder {</p>
+<p>public static void main(String[] args) {</p>
+<p>System.out.println(“class finder”); }</p>
+<p>}</p>
+<p>假设工程目录为 D:\workspace\dome1 ，最有可能正确运行并输出 &quot;class finder&quot; 的是 java -cp D:\workspace\dome1\out com.lenovo.school.recruitment.project.ClassFinder</p>
+<p>java -cp 和 -classpath 一样，是指定类运行所依赖其他类的路径，通常是类库，jar 包之类，需要全路径到 jar 包，window 上分号 “;”</p>
+<p><em>分隔，linux 上是分号 “:” 分隔。不支持通配符，需要列出所有 jar 包，用一点 “.” 代表当前路径。   格式： java -cp .;myClass.jar packname.mainclassname     表达式支持通配符，例如： java -cp .;c:\classes01\myClass.jar;c:\classes02*.jar  packname.mainclassname</em></p>
+<h3 id="标识符的声明"><a class="markdownIt-Anchor" href="#标识符的声明">#</a> 标识符的声明</h3>
+<p>以字母、下划线、美元符号（$) 开头</p>
+<p>后续字符是字母、数字、下划线或者美元符号</p>
+<p>标识符的长度一般为 32 位或者是 64 位。取决于开发语言</p>
+<p>标识符不能是关键字</p>
+<h3 id="java线程池的关键要素"><a class="markdownIt-Anchor" href="#java线程池的关键要素">#</a> Java 线程池的关键要素</h3>
+<p>1、核心线程数</p>
+<p>2、 最大线程数</p>
+<p>3、 队列</p>
+<p>4、 工作线程</p>
+<p>5、 拒绝策略</p>
+<h3 id="关于springbootapplication注解"><a class="markdownIt-Anchor" href="#关于springbootapplication注解">#</a> 关于 @SpringBootApplication 注解</h3>
+<p>它包含了以下几个注解：</p>
+<p>@SpringBootConfiguration</p>
+<p>@EnableAutoConfiguration</p>
+<p>@ComponentScan</p>
+<p>要注意的是 @Configuration 是 Spring 的注解</p>
+<h3 id="关于wait和sleep方法"><a class="markdownIt-Anchor" href="#关于wait和sleep方法">#</a> 关于 wait () 和 sleep () 方法</h3>
+<p>wait () 方法来至于 Object, 而 sleep () 方法来自与 Thread</p>
+<p>两个方法都会暂停当前的线程</p>
+<p>关于同步锁：sleep () 不会释放同步锁，而 wait () 方法会释放同步锁。</p>
+<h3 id="java-静态变量和成员变量的区别"><a class="markdownIt-Anchor" href="#java-静态变量和成员变量的区别">#</a> Java 静态变量和成员变量的区别</h3>
+<p>1、声明方式不同：静态变量通过关键之 static 声明，而成员变量是在类的主体中声明的</p>
+<p>2、生命周期不同：静态变量的生命周期是一个程序的整个运行周期，而成员变量的生命周期是取决于创建它的对象，对象开始到对象被销毁结束。这是它的生命周期。</p>
+<p>3、存储位置不同：成员变量存放于堆内存中，静态变量存放在方法区中。</p>
+<p>4、访问方式不同：静态变量可以通过类名来直接访问，成员变量的访问方式就是只能通过创建它的对象来访问。</p>
+<p>5、所属关系不同：静态变量是属于类的，而成员变量是属于对象</p>
+<p>6、初始化顺序不同：静态变量在程序开始运行的时候就进行初始化，而成员变量在对象创建的时候进行初始化、</p>
+<h1 id="方大集团股份有限公司"><a class="markdownIt-Anchor" href="#方大集团股份有限公司">#</a> <strong>方大集团股份有限公司</strong></h1>
+<hr>
+<h1 id="奇安信运维"><a class="markdownIt-Anchor" href="#奇安信运维">#</a> 奇安信运维</h1>
+<p>2020 年运维卷 1   20/48 答对，前 18%</p>
+<h2 id="对于一个文件的访问由什么共同限制"><a class="markdownIt-Anchor" href="#对于一个文件的访问由什么共同限制">#</a> 对于一个文件的访问，由什么共同限制？</h2>
+<p>用户的文件权限和文件的属性</p>
+<p>用户访问权限决定了哪些用户可以访问该文件，文件属性则规定了文件的各种信息，包括文件是否可读、可写或可执行等。</p>
+<p>其他因素如优先级和口令等虽然也可能对文件访问产生影响，但并非主要限制因素。</p>
+<h2 id="一个有向无环图是否存在拓扑排序"><a class="markdownIt-Anchor" href="#一个有向无环图是否存在拓扑排序">#</a> 一个有向无环图是否存在拓扑排序？</h2>
+<p>存在</p>
+<p>通常可以利用拓扑排序的方法检测图中是否存在环。</p>
+<p>过程：从起始点开始按拓扑排序依次删除结点，直到拓扑排序结束，如果依然有节点未被删除，那么是因为存在环，使得无法找到环的拓扑排序的入口。</p>
+<h2 id="epoll-et模式必须配合non-blocking-io使用吗"><a class="markdownIt-Anchor" href="#epoll-et模式必须配合non-blocking-io使用吗">#</a> epoll ET 模式必须配合 non-blocking IO 使用吗？</h2>
+<p>是的，epoll 的 ET 模式必须配合非阻塞 IO 使用。</p>
+<p>ET 模式是 epoll 工作的一种模式，它具有高速并且高效的特点。在这种模式下，当描述符从未就绪变为就绪时，内核通过 epoll 通知应用程序。然而，当一个文件描述符被设置为非阻塞时，如果读 / 写操作不能立即完成，操作将不会阻塞，而是立即返回。这样，应用程序可以立即进行其他操作，而不需要等待读 / 写操作完成。</p>
+<p>如果文件描述符没有被设置为非阻塞，那么在读 / 写操作不能立即完成时，操作将会阻塞，直到数据可用或可写为止。这样，应用程序将需要等待读 / 写操作完成，而这可能会导致应用程序的效率降低。</p>
+<p>因此，ET 模式必须配合非阻塞 IO 使用，以确保应用程序可以高效地处理文件描述符的就绪状态。</p>
+<p>注：epoll 作为 Linux 内核处理文件描述符的 poll 改进版，是一种针对大量并发连接进行高效处理的 IO 管理方式。</p>
+<h2 id="在一个空目录下执行umask-333-touch-hello命令后hello文件的权限为"><a class="markdownIt-Anchor" href="#在一个空目录下执行umask-333-touch-hello命令后hello文件的权限为">#</a> 在一个空目录下执行 umask 333; touch hello; 命令后，hello 文件的权限为？</h2>
+<p>-rw-r–r--</p>
+<p>umask 是 linux 中的一个命令，用于设置文件创建的权限掩码。umask 的值是一个三位数，代表了用户、用户组和其它用户的权限。执行 umask 333 时，用户，用户组，和其它用户的写权限被禁用了。文件的默认值为 666，执行 umask 后，666-333=333（即 - rw-r–r--)</p>
+<h2 id="在dns系统测试时假设named进程号是53如何通知进程重读配置文件"><a class="markdownIt-Anchor" href="#在dns系统测试时假设named进程号是53如何通知进程重读配置文件">#</a> 在 DNS 系统测试时，假设 named 进程号是 53，如何通知进程重读配置文件？</h2>
+<p>命令行的方式是：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -HUP 53</span><br></pre></td></tr></table></figure>
+<h2 id="mysql中的视图的作用"><a class="markdownIt-Anchor" href="#mysql中的视图的作用">#</a> mysql 中的视图的作用</h2>
+<p>在 MySQL 中，视图（View）是一种虚拟的表，它是由一个或多个查询语句生成的结果集。视图并不实际存储数据，而是基于存储在数据库中的源表（或其他视图）的数据进行计算和呈现。视图的作用主要包括以下几个方面：</p>
+<ol>
+<li>简化复杂的查询：视图可以将复杂的查询逻辑封装起来，使用户可以像访问普通表一样使用视图。这样，用户无需关心底层的查询逻辑，简化了查询操作。</li>
+<li>数据安全性：视图可以用于限制用户对数据的访问权限。通过创建适当的视图，用户只能看到他们被允许看到的数据，从而确保数据的安全性。</li>
+<li>数据抽象：视图可以隐藏底层表的结构变化，使得用户无需关注表的结构变化对查询的影响。当底层表的结构发生变化时，只需相应地修改视图定义即可。</li>
+<li>数据的汇总和转换：视图可以对多个表的数据进行汇总和转换，生成一个新的、虚拟的表结构，方便用户进行查询和分析。</li>
+<li>方便的数据访问接口：视图可以作为一个常用的数据访问接口，为不同的用户提供个性化的数据视图。</li>
+</ol>
+<p>需要注意的是，视图只是一个虚拟的表结构，不实际存储数据。因此，对视图的修改实际上会修改底层的查询逻辑，而不是直接修改数据。另外，在使用视图时，需要考虑视图的性能影响，因为视图是在查询时动态计算的，可能会对查询性能产生一定的影响。</p>
+<h2 id="数据库中删除名为-employeeview-的视图-应使用哪条语句"><a class="markdownIt-Anchor" href="#数据库中删除名为-employeeview-的视图-应使用哪条语句">#</a> 数据库中删除名为 EmployeeView 的视图。应使用哪条语句？</h2>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span> EmployeeView</span><br></pre></td></tr></table></figure>
+<h2 id="分别解释一下这四个integer-i01-128int-i02-128integer-i03-integervalueof-128integer-i04-new-integer-128以及它们之间的相等关系"><a class="markdownIt-Anchor" href="#分别解释一下这四个integer-i01-128int-i02-128integer-i03-integervalueof-128integer-i04-new-integer-128以及它们之间的相等关系">#</a> 分别解释一下这四个：Integer i01 = -128;int i02 = -128;Integer i03 =Integer.valueOf (-128);Integer i04 = new Integer (-128); 以及它们之间的相等关系.</h2>
+<p>Integer i01 = -128;<br>
+int i02 = -128;<br>
+Integer i03 =Integer.valueOf(-128);<br>
+Integer i04 = new Integer(-128);</p>
+<p>“i01”:“这是一个包装类 Integer 的实例，通过赋值创建，值为 - 128.”</p>
+<p>“i02”:“这是一个基本数据类型 int 的变量，值为 - 128.”</p>
+<p>“i03”: “这是一个包装类 Integer 的实例，通过调用 Integer 类的 valueOf 方法创建，值为 - 128。”</p>
+<p>“i04”: “这是一个包装类 Integer 的实例，通过调用 Integer 类的构造方法创建，值为 - 128。”,</p>
+<p>显然，2 和其它三项都不可以比较，其中 1=3=4</p>
+<h2 id="关于协程你对它的了解"><a class="markdownIt-Anchor" href="#关于协程你对它的了解">#</a> 关于协程你对它的了解？</h2>
+<p>协程，也称为微线程或轻量级线程，是用户态的轻量级线程。</p>
+<h2 id="协程的优点和缺点"><a class="markdownIt-Anchor" href="#协程的优点和缺点">#</a> 协程的优点和缺点</h2>
+<p>协程的优点主要包括：</p>
+<ol>
+<li>执行效率高：由于协程是轻量级线程，只在用户态进行操作，因此系统消耗的资源非常低，能够高效地执行任务。</li>
+<li>无需线程上下文切换：协程的切换开销由程序自身控制，避免了线程切换带来的额外开销，因此能够提高程序的性能。</li>
+<li>单线程多任务：协程可以在单线程中实现多任务，无需创建新的系统线程，从而降低了系统开销。</li>
+<li>避免线程安全问题：协程中的数据共享是通过通信方式实现的，避免了线程安全问题，避免了锁竞争，使得程序更加简洁高效。</li>
+</ol>
+<p>然而，协程也存在一些缺点：</p>
+<ol>
+<li>系统无法感知协程的存在：协程是由用户态控制的轻量级线程，系统无法感知其存在，因此不能发挥多核 CPU 的优势，适用于 I/O 阻塞型场景，而不适用于 CPU 密集型场景。</li>
+<li>无法实现并发执行：由于协程是单线程的轻量级线程，无法实现并发执行，因此在需要并发执行的任务中可能并不适用。</li>
+<li>需要手动调度：协程需要手动调度，程序员必须承担调度的责任，这可能会增加程序开发的复杂性。</li>
+</ol>
+<p>总的来说，协程具有执行效率高、无需线程上下文切换、单线程多任务等优点，但也存在无法发挥多核 CPU 优势、无法实现并发执行、需要手动调度等缺点。因此，在选择使用协程时，需要根据具体的应用场景和需求进行评估和选择。</p>
+<h2 id="协程间的通信"><a class="markdownIt-Anchor" href="#协程间的通信">#</a> 协程间的通信</h2>
+<p>通过通道（channel）</p>
+<h2 id="关于inode的了解"><a class="markdownIt-Anchor" href="#关于inode的了解">#</a> 关于 inode 的了解</h2>
+<h2 id="守护线程的一些概念"><a class="markdownIt-Anchor" href="#守护线程的一些概念">#</a> 守护线程的一些概念</h2>
+<p>守护线程是一种应用程序用于执行后台任务的线程。</p>
+<p>任何一个非守护线程没有结束，守护线程就一直运行存在。</p>
+<p>当最后一个非守护线程结束时，守护线程就会随着 JVM 一起结束运行。</p>
+<p>GC 线程其实就是守护线程。</p>
+<p>守护线程产生的新线程也是守护线程。</p>
+<hr>
+<p>2020 年运维卷 2   15/47 答对，前 21%</p>
+<h2 id="go语言中函数的支持"><a class="markdownIt-Anchor" href="#go语言中函数的支持">#</a> go 语言中函数的支持</h2>
+<p>函数中的 defer 语句执行的数据为先进先出</p>
+<h2 id="go中的切片特征"><a class="markdownIt-Anchor" href="#go中的切片特征">#</a> go 中的切片特征</h2>
+<p>在 Go 语言中，切片是一种动态数组，它提供了更加灵活的方式来处理数组和数组元素。切片的特性包括以下几点：</p>
+<ol>
+<li>不定长：切片可以随着存储容量的需要自动增长或缩小。这意味着切片可以根据实际需要来调整其大小，而无需在声明时指定固定的长度。</li>
+<li>提供 append 函数：切片提供了 append 函数，用于方便地向切片中添加新的元素。这个函数使得在切片中添加元素变得简单且直观。</li>
+<li>引用底层数组头指针：切片的本质是引用底层数组的头指针，以及当前切片长度和底层数组的大小。这意味着切片操作底层数组的效率较高，能够快速地访问和修改数组元素。</li>
+<li>共享底层数组：切片可以共享底层数组，这意味着多个切片可以指向同一个底层数组。如果多个切片共享了同一个底层数组，那么修改其中一个切片的内容也会影响到其他切片。</li>
+<li>扩容机制：当切片的底层数组容量不够时，切片会自动进行扩容。每次 append 操作如果容量不足，会创建一个新的数组，其大小是原数组的两倍，并将原数组的数据复制到新数组中。这样可以有效地处理数据增长的情况，避免频繁地重新分配内存。</li>
+</ol>
+<p>切片在 Go 语言中广泛应用，它提供了一种方便、灵活且高效的方式来处理和管理数据集合。</p>
+<h2 id="数据链路层的功能"><a class="markdownIt-Anchor" href="#数据链路层的功能">#</a> 数据链路层的功能</h2>
+<h2 id="代码结果是"><a class="markdownIt-Anchor" href="#代码结果是">#</a> 代码结果是？</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CONS(x,y) (int)(x##e##y)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, CONS(<span class="number">4</span>,<span class="number">2</span>));</span><br><span class="line">&#125; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>解；</p>
+<p>这段代码使用了 C 语言的预处理器宏定义和 ## 运算符。在这个代码中，CONS (x,y) 宏的功能是将 x 和 y 连接成一个字符串，并且在其前面加上 &quot;e&quot;，然后将其转换为一个整数。因此，CONS (4,2) 将会得到 &quot;4e2&quot;，然后转换为整数，即 4*10^2，结果为 400。所以，这段代码的输出结果为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">400</span><br></pre></td></tr></table></figure>
+<h2 id="java中的真数组"><a class="markdownIt-Anchor" href="#java中的真数组">#</a> Java 中的真数组</h2>
+<p>在 Java 中，真数组是一个固定大小的数据结构，它可以容纳一定数量的相同类型的元素。一旦创建了一个数组，就不能改变它的大小。数组的元素可以是任何类型，包括基本数据类型（如 int，char，boolean 等）和对象类型。</p>
+<p>在 Java 中，你可以通过以下方式创建一个真数组：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] intArray = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10</span>];  <span class="comment">// 创建一个能容纳10个整数的数组</span></span><br><span class="line">String[] strArray = <span class="keyword">new</span> <span class="title class_">String</span>[<span class="number">5</span>];  <span class="comment">// 创建一个能容纳5个字符串的数组</span></span><br></pre></td></tr></table></figure>
+<p>数组中的每个元素可以通过其索引进行访问。例如， <code>intArray[0]</code>  将访问数组中的第一个元素。在 Java 中，数组的索引是从 0 开始的，所以 <code>intArray[0]</code>  是数组的第一个元素， <code>intArray[9]</code>  是数组的最后一个元素。</p>
+<p>真数组和 ArrayList 不同，ArrayList 是一种动态数组，它的大小可以改变。这是 Java 中两种主要的集合类型，每种类型都有其特定的使用场景。</p>
+<h2 id="关于linux的防火墙"><a class="markdownIt-Anchor" href="#关于linux的防火墙">#</a> 关于 Linux 的防火墙</h2>
+<p>主要分为网络防火墙和主机防火墙</p>
+<p><strong>网络防火墙</strong>用于控制内外网的数据包通信，保护内网安全。它是在网络层工作的，针对 TCP/IP 数据包实施过滤和限制。在 Linux 系统中，防火墙体系主要基于内核编码实现，如 netfilter 和 iptables，它们分别代表了防火墙体系中的内核态和用户态。</p>
+<p>netfilter 是 Linux 内核中实现包过滤防火墙的内部结构，不以程序或文件的形式存在，属于 “内核态（Kernel Space，又称为内核空间）” 的防火墙功能体系。</p>
+<p>iptables 则是用来管理 Linux 防火墙的命令程序，通常位于 /sbin/iptables 目录下，属于 “用户态”（User Space，又称为用户空间）的防火墙管理体系。通过使用 iptables，外部请求在到达服务器之前首先要接受防火检查，只有通过防火墙检查，才能继续接受其他安全检查。</p>
+<p>至于如何配置 Linux 的防火墙，从系统安装之后，可以从 “系统” 主菜单中选择 “管理” &gt;“安全级别和防火墙” 命令来进行配置。还可以在命令行中运行命令 “system-fonfig-decuritylevel” 来定制防火墙规则。</p>
+<p><strong>主机防火墙</strong>是一种保护机器不受来自外部的、不需要的网络数据的干扰的方式。它允许用户通过定义一组防火墙规则来控制主机上的入站网络流量。这些规则用于对进入的流量进行排序，并可以阻断或允许流量。</p>
+<p>在 Linux 系统中，有一个名为 firewalld 的服务，它提供了一个带有 D-Bus 接口的、动态可定制的、基于主机的防火墙。如果防火墙规则在动态修改时需要启、修改和删除，firewalld 服务能够在每次修改规则时进行这些操作，不需要在每次修改规则时重启防火墙守护进程。这种工具有易于使用、集成度高等优点。</p>
+<h2 id="iptales和firewalld的区别"><a class="markdownIt-Anchor" href="#iptales和firewalld的区别">#</a> iptales 和 firewalld 的区别</h2>
+<p>它们是 Linux 系统中两个不同的防火墙工具，以下为它们的主要区别：</p>
+<ol>
+<li>动态规则管理：firewalld 可以动态修改单条规则，动态管理规则集，允许在不破坏现有会话和连接的情况下更新规则。而 iptables 在修改规则后必须全部刷新才能生效。</li>
+<li>规则表示方式：firewalld 使用区域和服务而不是链式规则，它基于区域和服务进行规则设置，而非传统的链式规则。而 iptables 则沿用传统的链式规则。</li>
+<li>默认策略：firewalld 默认是拒绝的，需要设置以后才能放行。而 iptables 默认是允许的，需要拒绝的才去限制。</li>
+<li>功能实现：无论是 firewalld 还是 iptables，它们的作用都是用于维护规则，但真正使用这些规则的是内核的 netfilter。也就是说，它们都是通过 netfilter 来实现防火墙的功能。</li>
+</ol>
+<p>总的来说，iptables 和 firewalld 在功能和使用上没有本质的区别，但是在操作方式、规则管理和默认策略等方面存在一些差异。在选择使用时，可以根据自己的需求和习惯来选择更适合自己的防火墙工具。</p>
+<h2 id="redis在的有序集合中在数据量极少的情况下使用的一下那种结构存储方案"><a class="markdownIt-Anchor" href="#redis在的有序集合中在数据量极少的情况下使用的一下那种结构存储方案">#</a> redis 在的有序集合中在数据量极少的情况下使用的一下那种结构存储方案？</h2>
+<p>压缩表</p>
+<h2 id="要授予用户读取表中数据的权限应使用哪个命令"><a class="markdownIt-Anchor" href="#要授予用户读取表中数据的权限应使用哪个命令">#</a> 要授予用户读取表中数据的权限，应使用哪个命令？</h2>
+<p>要授予用户读取表中数据的权限，你应该使用 SQL 的 <code>GRANT</code>  命令。这是一个非常常见的数据库操作，用于赋予用户对数据库的特定权限。</p>
+<p>例如，如果你想让用户能够读取（SELECT）一个名为 &quot;employees&quot; 的表，你可以使用以下命令：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> employees <span class="keyword">TO</span> your_username;</span><br></pre></td></tr></table></figure>
+<p>在这个命令中，&quot;SELECT&quot; 是你想赋予的权限，&quot;employees&quot; 是表的名字，&quot;your_username&quot; 是用户的用户名。</p>
+<p>请注意，这个命令的执行需要数据库管理员（DBA）的权限。此外，实际的 SQL 语句可能会根据你使用的数据库管理系统（如 MySQL、PostgreSQL、Oracle 等）有所不同。</p>
+<h2 id="char和varchar的区别"><a class="markdownIt-Anchor" href="#char和varchar的区别">#</a> char 和 varchar 的区别？</h2>
+<p>CHAR 和 VARCHAR 都是用于存储字符数据的 SQL 数据类型，但它们之间存在一些关键的区别。</p>
+<ol>
+<li>长度：CHAR 的长度是固定的，而 VARCHAR 的长度可以变化。CHAR 的长度是在定义数据类型时确定的，并且后续不能更改。而 VARCHAR 的长度可以根据存储的需求动态调整。</li>
+<li>存储效率：因为 CHAR 是定长，所以它在存储数据时效率较高，因为它不会浪费空间。而 VARCHAR 由于需要存储变长的数据，可能会占用更多的空间，尤其是在数据量较小的情况下。</li>
+<li>性能：由于 CHAR 是定长的，所以在某些情况下，查询和索引性能可能会比 VARCHAR 高。因为 VARCHAR 的长度是变动的，所以在某些数据库系统中，它可能会影响到查询和索引的性能。</li>
+<li>存储方式：在存储方式上，CHAR 和 VARCHAR 也有所不同。在 CHAR 中，一个英文字符（ASCII）占用 1 个字节，而一个汉字会占用两个字节。而在 VARCHAR 中，一个英文字符占用 2 个字节，一个汉字也会占用 2 个字节。</li>
+</ol>
+<p>总的来说，CHAR 和 VARCHAR 各有其优点和适用场景。如果需要存储的数据长度固定且不会变化太大，或者对空间的效率有较高要求，可以选择使用 CHAR；如果需要存储的数据长度会变化，或者对性能有较高要求，可以选择使用 VARCHAR。</p>
+<h2 id="返回状态代码"><a class="markdownIt-Anchor" href="#返回状态代码">#</a> 返回状态代码</h2>
+<p>1xx 处理信息，服务器收到请求，用户继续执行操作</p>
+<p>2xx 请求成功，操作被成功接收并处理</p>
+<p>3xx 重定向，<strong>服务器端</strong>需要进一步操作以完成请求</p>
+<p>4xx 客户端错误，请求包含语法错误或无法完成请求</p>
+<p>5xx 服务器端错误，服务器在处理请求过程中发生了错误</p>
+<p>作者：牛客 378117799 号</p>
+<p>链接：</p>
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/exam/test/73442480/submission?pid=35396977&amp;pageSource=testHistory">https://www.nowcoder.com/exam/test/73442480/submission?pid=35396977&amp;pageSource=testHistory</a></p>
+<p>来源：牛客网</p>
+<p>注意这里的 3XX 是<strong>服务器状态</strong></p>
+<h2 id="javapjdbjstackjconsole分别是什么"><a class="markdownIt-Anchor" href="#javapjdbjstackjconsole分别是什么">#</a> javap，jdb，jstack，jconsole 分别是什么</h2>
+<p>javap，jdb，jstack，jconsole 是 Java 开发中常用的工具和命令，分别用于不同的功能。</p>
+<ol>
+<li>javap：这是 Java 的 class 文件反编译器。它可以反编译 class 文件，从而获得类的结构信息、方法信息、常量池信息等。</li>
+<li>jdb：这是 Java 的调试器，用于调试 Java 程序。你可以使用 jdb 命令行工具，或者在 IDE 中集成 jdb 进行断点调试。</li>
+<li>jstack：这是 Java 的一个诊断工具，用于查看 Java 程序的线程堆栈信息。当 Java 程序崩溃生成 core 文件时，可以使用 jstack 工具获得 core 文件的 java stack 和 nativestack 的信息。</li>
+<li>jconsole：这是 Java Management Extensions (JMX) 的一个实时的图形化监测工具。它利用了内建到 JVM 里面的 JMX 指令来提供实时的性能和资源的监控，包括了 Java 程序的内存使用、线程的状态、类的分配状态和空间使用等等。</li>
+</ol>
+<hr>
+<h1 id="小米集团"><a class="markdownIt-Anchor" href="#小米集团">#</a> 小米集团</h1>
+<h2 id="下面的命令返回结果是"><a class="markdownIt-Anchor" href="#下面的命令返回结果是">#</a> 下面的命令返回结果是？</h2>
+<p>user=‘whoami’</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### sh test.sh</span><br><span class="line">### echo $user </span><br></pre></td></tr></table></figure>
+<p>答案是：空值</p>
+<p>正确获取用户名的方法是：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span>  </span><br><span class="line">user=$(whoami)  </span><br><span class="line">echo $user</span><br></pre></td></tr></table></figure>
+<p>这段脚本首先使用 <code>#!/bin/bash</code>  来声明这是一个 bash 脚本。然后，它使用 <code>$(whoami)</code>  来执行 <code>whoami</code>  命令，并将其输出赋值给 <code>user</code>  变量。最后，它使用 <code>echo $user</code>  来打印出 <code>user</code>  变量的值。</p>
+<p>你需要确保你的脚本有执行权限。你可以使用 <code>chmod +x test.sh</code>  来给你的脚本添加执行权限。然后，你可以使用 <code>./test.sh</code>  来运行你的脚本。这将在你的终端中打印出当前用户的用户名。</p>
+<h2 id="关于nginx配置不涉及磁盘读写的有哪些"><a class="markdownIt-Anchor" href="#关于nginx配置不涉及磁盘读写的有哪些">#</a> 关于 nginx 配置不涉及磁盘读写的有哪些？</h2>
+<p>proxy_cookie_path;</p>
+<p>Nginx 的缓存配置有以下选项：</p>
+<ol>
+<li>proxy_cache：用于反向代理缓存后端服务器的静态内容。该指令可以指定缓存的目录、大小、过期时间等。</li>
+<li>proxy_cache_valid：用于指定不同响应代码的缓存有效时间。例如， <code>proxy_cache_valid 200 304 12h;</code>  表示对 200 和 304 响应的缓存有效时间为 12 小时。</li>
+<li>proxy_temp_path：用于指定缓存的临时目录。</li>
+<li>proxy_buffering：用于开启或关闭代理服务器的缓冲功能。</li>
+<li>proxy_buffers：用于指定代理服务器的缓冲区大小。</li>
+<li>proxy_busy_buffers_size：用于指定代理服务器的忙碌缓冲区大小。</li>
+<li>proxy_max_temp_file_size：用于指定代理服务器的最大临时文件大小。</li>
+<li>proxy_temp_file_write_size：用于指定代理服务器的临时文件写入大小。</li>
+<li>proxy_cache_lock：用于控制是否锁住缓存的访问，以避免并发修改。</li>
+<li>proxy_cache_revalidate：用于控制是否在缓存过期时重新验证缓存的有效性。</li>
+<li>proxy_cache_background_updates：用于控制是否允许在后台更新缓存内容。</li>
+<li>proxy_cache_bypass：用于控制是否绕过缓存，直接向后端服务器发送请求。</li>
+<li>proxy_no_cache：用于控制是否将特定的请求缓存起来。</li>
+<li>proxy_cache_min_uses：用于指定缓存被使用多少次后才被考虑为命中和未命中的依据。</li>
+</ol>
+<p>以上是 Nginx 缓存配置中常用的选项，根据实际需求可以进行适当的配置和优化。</p>
+<h2 id="grep查看以log为开始的文件"><a class="markdownIt-Anchor" href="#grep查看以log为开始的文件">#</a> grep 查看以 “.log” 为开始的文件</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -r &quot;^\.log&quot; /path/dir</span><br></pre></td></tr></table></figure>
+<h2 id="原因分析"><a class="markdownIt-Anchor" href="#原因分析">#</a> 原因分析？</h2>
+<p>[host@test ~]# ping 10.0.0.1<br>
+PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.<br>
+64 bytes from 10.0.0.1: icmp_seq=1 ttl=64 time=0.023 ms<br>
+[host@test ~]# telnet 10.0.0.1 666<br>
+Trying 10.0.0.1 …<br>
+telnet: connect to address 10.0.0.1 : Connection refused<br>
+telnet 提示 Connection refused 的可能是什么 s</p>
+<p>1、10.0.0.1 机器的 666 端口上服务不正常</p>
+<p>2、telnet 不能检测 udp 协议端口</p>
+<p>3、10.0.0.1 机器的防火墙限制了 666 端口的访问</p>
+<p>2022 运维开发 卷一</p>
+<h2 id="哪个命令可以用于创建linux文件系统"><a class="markdownIt-Anchor" href="#哪个命令可以用于创建linux文件系统">#</a> 哪个命令可以用于创建 Linux 文件系统？</h2>
+<p>答：mkfs</p>
+<p>拓展：fdisk》用于创建和维护分区表的程序</p>
+<p>​	mount》用于挂载 Linux 系统外的文件</p>
+<p>​	fsck》检查文件系统并尝试修复错误</p>
+<h2 id="某机器字长64位内存容量位12gb按字编址则可寻址范围为"><a class="markdownIt-Anchor" href="#某机器字长64位内存容量位12gb按字编址则可寻址范围为">#</a> 某机器字长 64 位，内存容量位 12GB, 按字编址，则可寻址范围为？</h2>
+<p>12*1024 * 8 / 64 = 1536M</p>
+<h2 id="哪个命令来统计文件中包含的行数-字数-字符总数"><a class="markdownIt-Anchor" href="#哪个命令来统计文件中包含的行数-字数-字符总数">#</a> 哪个命令来统计文件中包含的行数、字数、字符总数</h2>
+<p>答：wc</p>
+<p>扩展：</p>
+<p>1、stat 命令用于显示文件的状态信息，比如文件的权限、所属用户和组、大小、修改时间等信息</p>
+<p>2、ls 命令用于列出指定目录下的文件和子目录</p>
+<p>3、tail 命令用于查看文本文件的尾部内容，默认显示文件的最后 10 行</p>
+<h2 id="哪一个命令可以用于侦测osi网络模型中7层服务的健康状态"><a class="markdownIt-Anchor" href="#哪一个命令可以用于侦测osi网络模型中7层服务的健康状态">#</a> 哪一个命令可以用于侦测 OSI 网络模型中 7 层服务的健康状态？</h2>
+<p>答：curl</p>
+<p>拓展：</p>
+<p>1、ping 用于测试网络连接量和分析网络速度</p>
+<p>2、telent 远程连接命令</p>
+<p>3、nmap 扫描网络中处于活动状态的主机、开放端口、操作系统和服务检测信息的扫描</p>
+<p><strong>注：ping 命令使用 ICMP 协议探测网络状态</strong>。</p>
+<p>ARP 地址解析协议属于 TCP/IP 模型中的 IP 层。</p>
+<h2 id="由操作系统的加载程序执行的操作有"><a class="markdownIt-Anchor" href="#由操作系统的加载程序执行的操作有">#</a> 由操作系统的加载程序执行的操作有？</h2>
+<p>操作系统的加载程序（也称为引导加载程序或引导程序）在启动过程中执行一系列操作，以准备操作系统的运行环境。这些操作可能包括：</p>
+<ol>
+<li><strong>硬件初始化</strong>：加载程序可能会初始化一些基本硬件，如内存、显示器、键盘等。</li>
+<li><strong>自检</strong>：许多加载程序会执行基本的硬件自检程序，以确保所有的硬件都能正确工作。</li>
+<li><strong>启动设备选择</strong>：加载程序可能会检测并选择一个启动设备，如硬盘、U 盘或网络。</li>
+<li><strong>引导扇区加载</strong>：加载程序通常会从选定的启动设备上加载引导扇区（也称为引导扇区或启动扇区）。</li>
+<li><strong>内核加载</strong>：引导扇区中的代码通常会进一步加载操作系统的内核。这可能涉及到从硬盘读取内核映像，并将其加载到内存中。</li>
+<li><strong>设置启动参数</strong>：加载程序可能会设置一些启动参数，这些参数将被传递给内核，以影响其行为和配置。</li>
+<li><strong>切换到内核</strong>：一旦内核被加载并设置好参数，加载程序就会将控制权交给内核，开始执行操作系统的主要功能。</li>
+<li><strong>启动其他服务</strong>：在某些情况下，加载程序可能还会启动一些其他服务，如初始化系统配置、启动后台进程等。</li>
+</ol>
+<p>请注意，不同的操作系统和硬件平台可能会有不同的加载程序和执行的操作。上述步骤是一个通用的描述，具体的细节可能会有所不同。</p>
+<h2 id="有两台-nginx-服务器-n0-和-n1需要将-n0-的-nginx-access-log-同步到-n1-可以使用下面哪些服务有"><a class="markdownIt-Anchor" href="#有两台-nginx-服务器-n0-和-n1需要将-n0-的-nginx-access-log-同步到-n1-可以使用下面哪些服务有">#</a> 有两台 nginx 服务器 n0 和 n1，需要将 n0 的 nginx access log 同步到 n1 ，可以使用下面哪些服务有？</h2>
+<ol>
+<li>Rsync：Rsync 是一种用于在本地和远程系统之间同步文件的工具。您可以使用 Rsync 在 n0 和 n1 之间同步 nginx access log。</li>
+<li>SCP（Secure Copy）：SCP 是一种基于 SSH 的文件传输协议，可以在本地和远程系统之间安全地传输文件。您可以使用 SCP 将 n0 的 nginx access log 复制到 n1。</li>
+<li>FTP（File Transfer Protocol）：FTP 是一种用于在本地和远程系统之间传输文件的协议。您可以使用 FTP 将 n0 的 nginx access log 上传到 n1。</li>
+<li>Syslog：Syslog 是一种用于在本地和远程系统之间传输日志消息的协议。您可以将 n0 的 nginx access log 发送到 Syslog 服务器，然后将其转发到 n1。</li>
+</ol>
+<h2 id="用于服务发现的软件有"><a class="markdownIt-Anchor" href="#用于服务发现的软件有">#</a> 用于服务发现的软件有？</h2>
+<p>DNS、Zookeeper、Consul、ETCD</p>
+<h2 id="私有地址"><a class="markdownIt-Anchor" href="#私有地址">#</a> 私有地址：</h2>
+<p>A 类：10.0.0.0~10.255.255.255	10 开头的</p>
+<p>B 类：172.16.0.0~172.31.255.255</p>
+<p>C 类：192.168.0.0~192.168.255.2555</p>
+<p>2022 运维开发卷 2</p>
+<h2 id="查看linux系统inode的使用率并格式化输出"><a class="markdownIt-Anchor" href="#查看linux系统inode的使用率并格式化输出">#</a> 查看 Linux 系统 inode 的使用率，并格式化输出？</h2>
+<p>df -i 或者 df -hi</p>
+<h2 id="一个事务在数据库中完全commit或rollback属于acid中的哪一个属性"><a class="markdownIt-Anchor" href="#一个事务在数据库中完全commit或rollback属于acid中的哪一个属性">#</a> 一个事务在数据库中完全 Commit 或 Rollback 属于 ACID 中的哪一个属性？</h2>
+<p>原子性和持久性。</p>
+<h2 id="redis中遍历所有key哪种方式对redis服务影响最小"><a class="markdownIt-Anchor" href="#redis中遍历所有key哪种方式对redis服务影响最小">#</a> Redis 中遍历所有 Key，哪种方式对 Redis 服务影响最小？</h2>
+<p>说说 keys*, 这个命令会阻塞 Redis 服务器，因为会把所有的 key 都检索出来，所以这种方式对 Redis 服务影响最大</p>
+<p>而 scan 命令是一个渐进式的遍历命令，可以遍历所有的 key，但对服务影响小。所谓渐进式就是每次只返回少量的元素。</p>
+<h2 id="linux-系统中抓取-eth2-网卡上经过的数据包已知对方-ip-为-10136914tcp-端口为80对应的命令为"><a class="markdownIt-Anchor" href="#linux-系统中抓取-eth2-网卡上经过的数据包已知对方-ip-为-10136914tcp-端口为80对应的命令为">#</a> Linux 系统中，抓取 eth2 网卡上经过的数据包，已知对方 IP 为 10.136.9.14，TCP 端口为 80，对应的命令为？</h2>
+<p>在 Linux 系统中，你可以使用 <code>tcpdump</code>  命令来抓取指定网卡上的数据包。对于你的需求，可以使用以下命令来抓取 eth2 网卡上对方 IP 为 10.136.9.14 且 TCP 端口为 80 的数据包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tcpdump -i eth2 -s 0 -A &#x27;host 10.136.9.14 and port 80&#x27;</span><br></pre></td></tr></table></figure>
+<p>这个命令的含义如下：</p>
+<ul>
+<li><code>sudo</code> ：使用管理员权限执行命令。</li>
+<li><code>tcpdump</code> ：抓包命令。</li>
+<li><code>-i eth2</code> ：指定网卡为 eth2。</li>
+<li><code>-s 0</code> ：抓取完整的数据包，而不截断数据。</li>
+<li><code>-A</code> ：以 ASCII 格式显示数据，方便阅读。</li>
+<li><code>'host 10.136.9.14 and port 80'</code> ：过滤条件，只抓取对方 IP 为 10.136.9.14 且 TCP 端口为 80 的数据包。</li>
+</ul>
+<p>请注意，执行该命令可能需要管理员权限，并且你需要在有 root 权限的情况下运行它。</p>
+<h2 id="shell变量名的命名规则是"><a class="markdownIt-Anchor" href="#shell变量名的命名规则是">#</a> shell 变量名的命名规则是？</h2>
+<p>1、以字母或者下划线开头</p>
+<p>2、可以包含字母、数字、下划线</p>
+<p>3、区分大小写</p>
+<p>4、不应该与 Shell 的关键字和命令名重复</p>
+<h2 id="linux-tmp目录的权限是什么"><a class="markdownIt-Anchor" href="#linux-tmp目录的权限是什么">#</a> Linux '/tmp’目录的权限是什么？</h2>
+<p>1777</p>
+<h2 id="哪些文件系统类型是linux默认支持的"><a class="markdownIt-Anchor" href="#哪些文件系统类型是linux默认支持的">#</a> 哪些文件系统类型是 Linux 默认支持的？</h2>
+<p>Linux 默认支持许多类型的文件系统，其中一些最常见的文件系统类型包括：</p>
+<ol>
+<li>Ext4：这是目前 Linux 发行版中最常用的文件系统类型，是 Ext3 文件系统的后续版本，具有更大的文件系统和文件、更多的子目录数量以及持久性预分配等特点。</li>
+<li>ReisferFS：这是一种高级的文件系统类型，旨在为 NFSv4 提供更好的支持，同时具有日志记录和数据完整性检查功能。</li>
+<li>XFS：这是一种高性能的文件系统类型，最初是为 OS/2 开发的，但后来被移植到 Linux 系统中。它具有优秀的磁盘管理和性能优化特点。</li>
+<li>Btrfs：这是一种新型的、具有快照和容错能力的文件系统类型，可以很好地适应大容量存储设备。</li>
+<li>JFS：这是一种支持透明压缩和日志记录的文件系统类型，具有优秀的性能和稳定性。</li>
+</ol>
+<p>总的来说，Linux 支持的文件系统类型非常多，可以根据不同的需求选择最适合的文件系统类型。</p>
+<h2 id="标准http协议不支持的请求方法有"><a class="markdownIt-Anchor" href="#标准http协议不支持的请求方法有">#</a> 标准 Http 协议不支持的请求方法有？</h2>
+<p>update、drop、insert</p>
+<h2 id="在mysql数据库中哪种操作不能通过binlog恢复binlog是row格式"><a class="markdownIt-Anchor" href="#在mysql数据库中哪种操作不能通过binlog恢复binlog是row格式">#</a> 在 MySQL 数据库中，哪种操作不能通过 Binlog 恢复，Binlog 是 row 格式</h2>
+<p>在 MySQL 数据库中，Binlog（二进制日志）用于记录数据库的所有更改操作，以便在需要时进行恢复。然而，有些操作是无法通过 Binlog 恢复的，主要包括以下几种：</p>
+<ol>
+<li>创建或删除数据库：使用 Binlog 无法恢复已删除的数据库或创建新的数据库。</li>
+<li>创建或删除表：类似于数据库的创建和删除，Binlog 无法恢复已删除的表或创建新的表。</li>
+<li>修改表结构：更改表的列名、数据类型、索引等操作无法通过 Binlog 恢复。</li>
+<li>更改存储引擎：将表从一个存储引擎更改为另一个存储引擎的操作无法通过 Binlog 恢复。</li>
+<li>更改数据表的字符集：更改表的字符集或排序规则的操作无法通过 Binlog 恢复。</li>
+<li>更改表的行格式：例如，将表的行格式从 ROW 更改为 STATEMENT 或 MIXED，无法通过 Binlog 恢复。</li>
+</ol>
+<p>需要注意的是，上述操作虽然无法通过 Binlog 恢复，但是可以通过备份和还原的方式来恢复数据。因此，为了确保数据的安全性，建议定期备份数据库，并在执行重要操作之前先做好备份。</p>
+<h2 id="在-linux-运维工作中我们经常用-top-或-uptime-命令来观察系统的平均负载load-average谈谈你对平均负载理解"><a class="markdownIt-Anchor" href="#在-linux-运维工作中我们经常用-top-或-uptime-命令来观察系统的平均负载load-average谈谈你对平均负载理解">#</a> 在 Linux 运维工作中，我们经常用 top 或 uptime 命令来观察系统的平均负载（Load Average），谈谈你对平均负载理解？</h2>
+<p>在 Linux 运维工作中，理解平均负载的概念确实非常重要。平均负载是描述系统在特定时间内，待处理的工作负载的平均水平。它可以帮助我们了解系统的繁忙程度，以及系统资源是否得到充分利用。</p>
+<p>首先，我们先来看一下平均负载的来源。在 Linux 中，平均负载可以通过 top 或 uptime 命令来查看。uptime 命令会显示系统的当前时间、已经运行的时间、登录的用户数，以及系统在过去 1 分钟、5 分钟和 15 分钟内的平均负载。</p>
+<p>然而，我们经常会误解平均负载的含义。平均负载并不直接代表单位时间内的 CPU 使用率。事实上，平均负载反映的是在特定时间段内，等待 CPU 处理的任务的平均数量。这包括那些正在等待 CPU 时间片，以及那些已经因为 I/O 操作或主动进入等待状态而离开运行队列的进程。</p>
+<p>换句话说，平均负载可以理解为系统在特定时间段内，处于 “待处理” 状态的进程的平均数量。如果一个进程满足以下条件，它就会处于运行队列中：没有在等待 I/O 操作的结果，没有主动进入等待状态，也没有被停止。</p>
+<p>对于运行队列中的平均进程数量的理解，我们不能简单地把它当做 CPU 的当前活动进程数。一般来说，只要每个 CPU 的当前活动进程数不大于 3，那么系统的性能就是良好的。如果每个 CPU 的任务数大于 5，那么就表示这台机器的性能有严重问题。</p>
+<p>在实际的 Linux 运维工作中，理解平均负载的概念可以帮助我们更好地把握系统的繁忙程度，以及预测系统可能面临的性能问题。同时，这也要求我们不断地学习和理解更深层次的系统架构和原理。</p>
+<hr>
+<h1 id="金山办公"><a class="markdownIt-Anchor" href="#金山办公">#</a> 金山办公</h1>
+<p>2020 校招卷一</p>
+<h2 id="linux文件权限的分类"><a class="markdownIt-Anchor" href="#linux文件权限的分类">#</a> Linux 文件权限的分类</h2>
+<p>Linux 文件一共有 10 位的长度，分成 4 段。</p>
+<p>第一段一个位置，代表文件的类型</p>
+<p>第二段三个位置，代表主权限</p>
+<p>第三段三个位置，代表属组权限</p>
+<p>第四段三个位置，代表其它用户权限</p>
+<h2 id="init命令了解吗"><a class="markdownIt-Anchor" href="#init命令了解吗">#</a> init 命令了解吗？</h2>
+<p><strong>它相当于父进程。</strong></p>
+<p>init 是 Linux 系统操作中不可缺少的程序之一。所谓的 init 进程，它是一个由内核启动的用户级进程。 init 进程由 0 进程创建，完成系统的初始化，是系统中所有其他用户进程的祖先进程。<br>
+  内核自行启动（已经被载入内存，开始运行，并已初始化所有的设备驱动程序和数据结构等）之后，就通过启动一个用户级程序 init 的方式，完成引导进程。所以， init 始终是第一个进程（其进程编号始终为 1）。<br>
+  Linux 中的所有进程都是由 init 进程创建并运行的。首先 Linux 内核启动，然后在用户空间中启动 init 进程，再启动其他系统进程。在系统启动完成后， init 将变成为守护进程监视系统其他进程。<br>
+  内核会在过去曾使用过 init 的几个地方查找它，它的正确位置（对 Linux 系统来说）是 /sbin/init 。如果内核找不到 init ，它就会试着运行 /bin/sh ，如果运行失败，系统的启动也会失败。</p>
+<h2 id="在bash中-export命令的作用是"><a class="markdownIt-Anchor" href="#在bash中-export命令的作用是">#</a> 在 bash 中 export 命令的作用是</h2>
+<p>创建一个<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F&amp;spm=1001.2101.3001.7020">环境变量</a>，并对其子 shell 可见。没有用 export 声明的变量，仅对当前的 shell 可见。<br>
+注：它不是为其它应用程序设置环境变量的。</p>
+<h2 id="试着写几种查看file1文件的第300-500行的内容的linux命令"><a class="markdownIt-Anchor" href="#试着写几种查看file1文件的第300-500行的内容的linux命令">#</a> 试着写几种查看 file1 文件的第 300-500 行的内容的 linux 命令</h2>
+<p>使用 sed 命令；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">&#x27;300,500p&#x27;</span> file1</span><br></pre></td></tr></table></figure>
+<p>使用 awk 命令；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">&#x27;NR&gt;=300 &amp;&amp; NR&lt;=500&#x27;</span> file1</span><br></pre></td></tr></table></figure>
+<p>使用 head 和 tail 命令；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">head</span> -n 500 file1 | <span class="built_in">tail</span> -n +300</span><br></pre></td></tr></table></figure>
+<h2 id="head和tail命令的区别"><a class="markdownIt-Anchor" href="#head和tail命令的区别">#</a> head 和 tail 命令的区别？</h2>
+<p><code>head</code>  命令和 <code>tail</code>  命令都是用于查看文件内容的命令，它们的主要区别在于所查看的文件部分不同。</p>
+<p><code>head</code>  命令用于查看文件的开头部分，默认显示前 10 行内容，可以通过一个数字选项来设置显示的行数。例如， <code>head -20 install.log</code>  会查看 <code>install.log</code>  这个文件前面 20 行的内容。</p>
+<p>而 <code>tail</code>  命令则用于查看文件的末尾部分，默认显示文件的最后 10 行内容。同样，也可以通过一个数字选项来设置显示的行数。例如， <code>tail -20 install.log</code>  会查看 <code>install.log</code>  这个文件最后 20 行的内容。</p>
+<p>如果想要查看正在改变的日志文件，比如及时观察  <code>/var/log/messages</code>  的变化，可以使用  <code>tail -f /var/log/messages</code>  命令，该命令会自动实时地把打开文件中的新消息显示到屏幕上。</p>
+<p>综上， <code>head</code>  命令和 <code>tail</code>  命令虽然都是用于查看文件内容的命令，但它们所查看的文件部分不同，同时， <code>tail</code>  命令还具有实时查看更新内容的功能。</p>
+<h2 id="python组合数据类型"><a class="markdownIt-Anchor" href="#python组合数据类型">#</a> python 组合数据类型。</h2>
+<p>（在 python 中引发一个不存在索引的列表元素会出现 NameError 错误）</p>
+<p>（在 python3 版本中，支持使用中文名作为变量名，而在 python2 中不可以）</p>
+<h2 id="3in1234的结果是"><a class="markdownIt-Anchor" href="#3in1234的结果是">#</a> [3] in [1,2,3,4] 的结果是？</h2>
+<p>False</p>
+<p>想要结果是 True 就得是 3 in [1,2,3,4]</p>
+<h2 id="python中字典对象的什么方法返回字典中的键-值对列表"><a class="markdownIt-Anchor" href="#python中字典对象的什么方法返回字典中的键-值对列表">#</a> python 中字典对象的什么方法返回字典中的 “键 - 值对” 列表</h2>
+<p>items () 方法</p>
+<h2 id="python中内建异常类的基类是"><a class="markdownIt-Anchor" href="#python中内建异常类的基类是">#</a> python 中内建异常类的基类是？</h2>
+<p>BaseException</p>
+<h2 id="python中列表和元组的区别是"><a class="markdownIt-Anchor" href="#python中列表和元组的区别是">#</a> python 中列表和元组的区别是？</h2>
+<p>列表可变，元组不可变，列表比元组要慢一点。</p>
+<h2 id="计算出从你生日之日起到今天一共过了多少天python-go-shell均可"><a class="markdownIt-Anchor" href="#计算出从你生日之日起到今天一共过了多少天python-go-shell均可">#</a> 计算出从你生日之日起到今天一共过了多少天？（python、go、shell 均可）</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#你的生日</span></span><br><span class="line">birthday = datetime(<span class="number">2001</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#现在的日期</span></span><br><span class="line">today = datetime.today()</span><br><span class="line"></span><br><span class="line">delta = today - birthday</span><br><span class="line"></span><br><span class="line">days = delta.days</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;days&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="你如何监视服务器质量和网络质量用哪些工具及优缺点"><a class="markdownIt-Anchor" href="#你如何监视服务器质量和网络质量用哪些工具及优缺点">#</a> 你如何监视服务器质量和网络质量？用哪些工具及优缺点？</h2>
+<p>监视服务器质量和网络质量的重要性不言而喻。这可以通过一系列的工具和方法来实现。</p>
+<p>一般来说，对于服务器质量的监控，可以使用 Nagios、Zabbix 等工具，它们是用于监控整个基础结构的工具，可以监控几乎所有内容，比如服务器性能，网络性能以及协议，操作系统，应用等等。不过，对于一些企业基础架构没那么复杂，或者只需要监控服务器性能的情况，也可以使用轻量级的工具如 Ward 来监控服务器状况，Ward 可以提供与服务器有关的主要信息。</p>
+<p>对于网络质量的监控，现在有很多种工具可供选择。一种是基于服务器端的监测，这种监测软件需要用户购买后安装在本地服务器上，主要监测本地的服务器、数据库等软硬件的运行性能。优点是用户可以了解本地机器的使用效率，还可以了解本地的网络连接及一些电子商务流程在本地的执行情况。但缺点是不能直接反映终端用户登录网站及使用网站提供的电子商务服务的实际体验。另一种是离线分析工具，比如 Etherman 等，它们是在线实时监测工具的补充，可以对网络状态做更细致、更精确的测量和分析。</p>
+<p>最后要强调的是，这些工具各有利弊，不同的场景需要使用不同的工具，所以并没有一种万能的工具可以适用于所有情况。在使用这些工具的时候，一定要结合实际需求和场景，选择最适合自己的工具来提高工作效率。</p>
+<h2 id="说说你理解的运维开发工程师是什么样的一个角色并说说运维开发工程师应该具备哪些技能"><a class="markdownIt-Anchor" href="#说说你理解的运维开发工程师是什么样的一个角色并说说运维开发工程师应该具备哪些技能">#</a> 说说你理解的运维开发工程师是什么样的一个角色？并说说运维开发工程师应该具备哪些技能？</h2>
+<p>运维开发工程师是一种负责开发、维护和管理企业 IT 基础设施的工程师角色。他们需要具备广泛的计算机科学和系统工程知识，以及丰富的实践经验，以应对现代企业 IT 环境的复杂性和多样性。</p>
+<p>运维开发工程师的主要职责包括：</p>
+<ol>
+<li>系统设计与优化：运维开发工程师需要了解系统架构设计，包括服务器、存储、网络等基础设施的规划、部署和故障排除。他们还需要对应用程序的性能进行优化，以改善系统的整体性能。</li>
+<li>监控与故障排除：运维开发工程师需要设计和实施监控系统，以便及时发现和解决潜在的问题。当系统出现故障时，他们需要迅速响应并采取适当的措施以最大限度地减少对业务的影响。</li>
+<li>安全防护：运维开发工程师需要了解网络安全的基本概念和方法，并确保系统免受恶意攻击和未经授权的访问。他们还需要定期更新和实施安全补丁和策略，以确保系统的安全性。</li>
+<li>自动化与工具开发：为了提高工作效率和减少人为错误，运维开发工程师需要开发和维护自动化工具和脚本，以简化日常任务和加快故障排除速度。</li>
+<li>容量规划和管理：运维开发工程师需要了解系统的容量需求，并根据业务需求进行规划和管理。他们需要确保系统具有足够的处理能力和存储空间，以满足用户的需求并保证良好的用户体验。</li>
+</ol>
+<p>为了完成这些职责，运维开发工程师需要具备以下技能：</p>
+<ol>
+<li>操作系统和网络知识：运维开发工程师需要了解常见的操作系统和网络协议，以便进行系统的部署、配置和故障排除。</li>
+<li>编程和脚本语言：编程和脚本语言是开发自动化工具和脚本的关键。常见的编程语言包括 Python、Java、C++ 等，而脚本语言则包括 Bash、Perl、Python 等。</li>
+<li>数据库管理技能：数据库是现代应用程序的重要组成部分，因此运维开发工程师需要具备数据库管理技能，包括安装、配置、优化和维护数据库等。</li>
+<li>监控和日志分析技能：为了确保系统的稳定性和可用性，运维开发工程师需要了解监控和日志分析技能，包括使用工具（如 Nagios、Zabbix 等）监控系统性能、识别问题并分析日志文件等。</li>
+<li>安全知识和技能：运维开发工程师需要了解常见的网络安全威胁和攻击手段，并掌握防范措施。他们还需要掌握加密技术和访问控制策略的实施方法，以确保系统的安全性。</li>
+<li>学习能力：IT 行业的变化非常快，因此运维开发工程师需要具备快速学习和适应新技术的能力，以便应对不断变化的 IT 环境。</li>
+<li>沟通和团队合作能力：运维开发工程师需要与其他团队（如开发、测试、QA 等）紧密合作，以确保系统的稳定性和可用性。他们还需要与业务团队合作，以了解业务需求并为其提供技术支持。因此，良好的沟通和团队合作能力是必不可少的。</li>
+</ol>
+<p>2020 运维卷二</p>
+<h2 id="chmod命令的了解"><a class="markdownIt-Anchor" href="#chmod命令的了解">#</a> chmod 命令的了解</h2>
+<h1 id="网易"><a class="markdownIt-Anchor" href="#网易">#</a> 网易</h1>
+<p>2021 系统运维（正式第一批）</p>
+<h2 id="linux进程调度的时候什么进程状态转化不会发生"><a class="markdownIt-Anchor" href="#linux进程调度的时候什么进程状态转化不会发生">#</a> Linux 进程调度的时候，什么进程状态转化不会发生？</h2>
+<p>D-》T	不可中断阻塞 -》挂起</p>
+<p>几个简记：</p>
+<p>R (running): 运行或者就绪</p>
+<p>D (disk sleep): 不可中断阻塞</p>
+<p>S (sleeping): 可中断阻塞</p>
+<p>T (stopped): 挂起</p>
+<h2 id="服务器上有aash"><a class="markdownIt-Anchor" href="#服务器上有aash">#</a> <a target="_blank" rel="noopener" href="http://xn--aa-pv2ct4pfsf273aya.sh">服务器上有 aa.sh</a>,<a target="_blank" rel="noopener" href="http://bb.sh">bb.sh</a>, 确认脚本编写语法没有问题，执行 bash <a target="_blank" rel="noopener" href="http://aa.sh">aa.sh</a> || bash bb.sh 的时候，是什么意思？</h2>
+<p>答：aa.sh 执行不成功，<a target="_blank" rel="noopener" href="http://xn--bb-jn5dy99k.sh">执行 bb.sh</a></p>
+<p>注：  command1 || command2 逻辑<strong>或</strong> --&gt;  如果这个命令执行失败了 || 那么就执行这个命令<br>
+ command1 &amp;&amp; command2 逻辑<strong>与</strong>  --&gt;  如果这个命令执行成功 &amp;&amp; 那么执行这个命令</p>
+<h2 id="server端接受tcp包的时候发现12345顺序中丢了2会触发什么"><a class="markdownIt-Anchor" href="#server端接受tcp包的时候发现12345顺序中丢了2会触发什么">#</a> server 端接受 TCP 包的时候，发现 1，2，3，4，5 顺序中丢了 2，会触发什么？</h2>
+<p>此题设计的考点为快重传。</p>
+<p>接收端在接收到报文段 1 和报文段 2 后都发出了确认，但是没收到报文段 3 就收到了报文段 4，它会<strong>重复发送报文段 2 对应的 ack 码</strong>，再收到报文段 5，报文段 6 之后仍然会发送报文段 2 的 ack 码，这样发送端连续收到 3 个重复的 ack 码时，就能很快速的意识到报文段 3 丢失了，会重新发送报文段 3</p>
+<h2 id="bash下如何获得当前进程的pid"><a class="markdownIt-Anchor" href="#bash下如何获得当前进程的pid">#</a> bash 下如何获得当前进程的 pid？</h2>
+<p>答：echo $$</p>
+<p>拓展：</p>
+<p>echo $$  返回登录 shell 的 PID</p>
+<p>echo $?  返回上一个命令的状态，0 表示没有错误，其它任何值表明有错误</p>
+<p>echo $#  返回传递到脚本的参数个数</p>
+<p>echo $*  以一个单字符串显示所有向脚本传递的参数，与位置变量不同，此选项参数可超过 9 个</p>
+<p>echo $!  返回后台运行的最后一个进程的进程 ID 号</p>
+<p>echo $@ 返回传递到脚本的参数个数，但是使用时加引号，并在引号中返回每个参数</p>
+<p>echo $-  显示 shell 使用的当前选项</p>
+<p>echo $0 是脚本本身的名字</p>
+<p>echo $_ 是保存之前执行的命令的最后一个参数</p>
+<p>echo $1 传入脚本的第一个参数</p>
+<h2 id="linux下管道数据进出是哪种模式"><a class="markdownIt-Anchor" href="#linux下管道数据进出是哪种模式">#</a> linux 下管道数据进出是哪种模式？</h2>
+<p>答：fifo, 即 First In First Out 先进先出</p>
+<h2 id="如果在linux下执行对一个可执行文件执行chmod-us-usrlocalbinhtg有什么副作用"><a class="markdownIt-Anchor" href="#如果在linux下执行对一个可执行文件执行chmod-us-usrlocalbinhtg有什么副作用">#</a> 如果在 Linux 下执行对一个可执行文件，执行 chmod u+s /usr/local/bin/htg，有什么副作用？</h2>
+<p>文件提权</p>
+<p>解释：</p>
+<p>在 Linux 中， <code>chmod u+s</code>  命令将给文件的所有者添加 “setuid” 权限。当一个程序具有 setuid 权限时，每当该程序运行时，它将以该文件的所有者的身份运行，而不是以运行它的用户的身份运行。</p>
+<p>例如，如果你执行的  <code>htg</code>  程序是一个命令行工具，那么当你执行它时，它会以  <code>/usr/local/bin/htg</code>  文件的所有者的权限运行，而不是以你的用户的权限运行。</p>
+<p>副作用包括：</p>
+<ol>
+<li><strong>安全问题</strong>：Setuid 权限可能被滥用，导致系统安全问题。例如，如果  <code>htg</code>  程序存在漏洞，攻击者可能会利用这些漏洞，通过运行  <code>htg</code>  程序获得文件所有者的权限，这些权限可能超出他们本应有的权限。</li>
+<li><strong>权限问题</strong>：如果  <code>htg</code>  程序需要以特定用户的身份运行（例如，文件的所有者），那么添加 setuid 权限可能会解决问题。然而，这也可能导致其他用户无法正常运行  <code>htg</code>  程序，因为他们可能没有足够的权限。</li>
+<li><strong>程序运行问题</strong>：如果  <code>htg</code>  程序依赖于特定的用户环境或配置文件，并且这些文件对所有用户都不可用，那么添加 setuid 权限可能会导致程序无法正常运行。</li>
+</ol>
+<p>总的来说，添加 setuid 权限是一个需要谨慎操作的操作，需要充分理解其含义和可能带来的问题。在大多数情况下，你应该尝试以其他方式解决程序运行的问题，而不是添加 setuid 权限。如果你确实需要添加 setuid 权限，那么你应该确保程序的安全性，并确保你理解这可能带来的安全风险。</p>
+<h2 id="网卡丢包情况可以用哪个命令查看"><a class="markdownIt-Anchor" href="#网卡丢包情况可以用哪个命令查看">#</a> 网卡丢包情况可以用哪个命令查看？</h2>
+<p>ifconfig</p>
+<p>可以直接查看到 eth0 等网卡的情况</p>
+<h2 id="文件系统启用journal的作用"><a class="markdownIt-Anchor" href="#文件系统启用journal的作用">#</a> 文件系统启用 journal 的作用？</h2>
+<p>journal 文件系统是一个文件系统用于追踪没有 dump 到文件系统的修改，然后可以在故障时帮助文件系统找回丢失的文件。</p>
+<p>linux fsck (file system check) 用于检查和修复 Linux 档案，同时检查一个或多个 Linux 档案文件系统。</p>
+<h2 id="编写脚本找出usrsrc目录下所有的c文件然后将这些c文件打包成一个tgz文件"><a class="markdownIt-Anchor" href="#编写脚本找出usrsrc目录下所有的c文件然后将这些c文件打包成一个tgz文件">#</a> 编写脚本，找出 /usr/src 目录下所有的.c 文件，然后将这些.c 文件打包成一个 tgz 文件</h2>
+<p>find /usr/src -name “<em>.c” -type f -print0 | tar -czvf backup.tar.gz --null -T -  或者 find /usr/src -name “</em>.c” -type f -exec tar -czvf backup.tar.gz ‘{}’ +   #重点是考察 find/tar 命令的参数使用</p>
+<h2 id="查走某目录下的c文件并列举出来"><a class="markdownIt-Anchor" href="#查走某目录下的c文件并列举出来">#</a> 查走某目录下的.c 文件并列举出来</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /root/usr -type f -name &quot;*.c&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="如何在非图形界面下抓取来自eth0的目标地址为1231313的80端口tcp数据包对应的tcpdump命令怎么写"><a class="markdownIt-Anchor" href="#如何在非图形界面下抓取来自eth0的目标地址为1231313的80端口tcp数据包对应的tcpdump命令怎么写">#</a> 如何在非图形界面下抓取来自 eth0 的目标地址为 123.13.1.3 的 80 端口 tcp 数据包，对应的 tcpdump 命令怎么写？</h2>
+<p>要使用 tcpdump 命令在非图形界面下抓取来自 eth0 的目标地址为 123.13.1.3 的 80 端口 TCP 数据包，可以使用以下命令：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo tcpdump -i eth0 -s <span class="number">0</span> -A <span class="string">&#x27;host 123.13.1.3 and port 80&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这个命令的意思是：</p>
+<ul>
+<li><code>-i eth0</code> ：监听 eth0 网络接口。</li>
+<li><code>-s 0</code> ：抓取完整的数据包，而不截断数据。</li>
+<li><code>-A</code> ：以 ASCII 格式打印数据包的数据部分。</li>
+<li><code>'host 123.13.1.3 and port 80'</code> ：只抓取目标地址为 123.13.1.3 且端口为 80 的数据包。</li>
+</ul>
+<p>请注意，执行此命令可能需要管理员权限，因此需要使用 sudo 或在 root 用户下执行。</p>
+<h2 id="请描述运维的工作内容及核心目标为达成目标最需要具备的因素有哪些"><a class="markdownIt-Anchor" href="#请描述运维的工作内容及核心目标为达成目标最需要具备的因素有哪些">#</a> 请描述运维的工作内容及核心目标，为达成目标最需要具备的因素有哪些？</h2>
+<p>运维工作主要是指对计算机系统、网络、数据库等进行维护、监控和管理，以确保系统的稳定运行和业务的持续服务。以下是运维的主要工作内容和核心目标：</p>
+<p>工作内容：</p>
+<ol>
+<li>系统监控和维护：监控服务器、网络、存储等基础设施的运行状态，及时发现和解决性能瓶颈、安全问题等。</li>
+<li>故障处理：在系统出现故障时，快速定位并解决问题。这包括定期的服务器巡检、日志分析、应急预案等。</li>
+<li>资源规划和管理：合理规划和分配服务器、存储、网络等资源，提高系统的可用性和稳定性。</li>
+<li>数据备份和恢复：确保数据的安全性和完整性，定期进行数据备份，在数据丢失时能够快速恢复。</li>
+<li>优化和改进：通过对系统的性能监控、分析和优化，提高系统的运行效率。</li>
+</ol>
+<p>核心目标：</p>
+<ol>
+<li>高可用性：确保系统能够持续、稳定地为用户提供服务，减少停机时间。</li>
+<li>安全性和隐私保护：保护系统和数据的安全，防止黑客攻击和数据泄露。</li>
+<li>性能优化：提高系统的性能和响应速度，提升用户体验。</li>
+<li>成本控制：在满足业务需求的同时，合理控制 IT 成本。</li>
+</ol>
+<p>为了达成以上目标，运维人员需要具备以下因素：</p>
+<ol>
+<li>技术能力：熟悉服务器、网络、存储等基础设施的配置和管理，了解操作系统、数据库等软件系统的基本原理和操作。</li>
+<li>问题解决能力：能够快速定位和解决系统出现的各种问题，这包括对日志的分析、系统性能的监控和优化等。</li>
+<li>沟通能力：与开发、测试、市场等部门保持良好的沟通，理解业务需求，提供有效的 IT 解决方案。</li>
+<li>责任心和耐心：对工作认真负责，能够处理长时间、繁琐的任务，保证系统的稳定运行。</li>
+<li>学习能力：不断学习和掌握新的技术和工具，以适应不断变化的市场需求。</li>
+<li>团队合作：良好的团队合作能力，能够与其他运维人员、开发人员等协同工作，共同解决问题。</li>
+<li>应急预案：制定和执行应急预案，在突发问题出现时能够快速响应和处理，最大限度地减少对业务的影响。</li>
+<li>文档能力：良好的文档编写能力，能够对系统的配置、操作等进行记录和整理，为后续工作提供参考。</li>
+<li>自动化和智能化：通过自动化工具和智能化手段提高运维效率和质量，减少人工操作误差。</li>
+<li>合规性和安全性：了解和遵守 IT 行业的合规性要求，保证运维工作的合法性和安全性。</li>
+</ol>
+<p>以上是运维工作的一些基本内容和目标，以及达成这些目标所需的因素。随着云计算、大数据等技术的不断发展，运维工作也在不断变革和创新，需要不断学习和进步。</p>
+<h2 id="讲述一下47层负载均衡的区别和适用场景"><a class="markdownIt-Anchor" href="#讲述一下47层负载均衡的区别和适用场景">#</a> 讲述一下 4/7 层负载均衡的区别和适用场景。</h2>
+<p>四层负载均衡和七层负载均衡的主要区别在于它们工作的网络层和负载均衡的机制。</p>
+<p>四层负载均衡，主要是基于 TCP 协议报文，可以处理任何基于 TCP/IP 协议的软件的负载均衡。它主要基于 IP 地址和端口号来进行服务分发，因此，对于像 HTTP、FTP 等协议，它可以实现精准的负载均衡。此外，由于 TCP 协议的传输特点，四层负载均衡可以实现较为灵活的负载均衡策略，例如，根据网络流量、负载情况等因素进行动态调整。</p>
+<p>七层负载均衡，又称为应用层负载均衡，主要工作在 OSI 模型的应用层，它可以基于虚拟的 URL 或其他应用层信息（如浏览器类别、语言）进行负载均衡。因此，对于 Web 服务器等应用，七层负载均衡可以提供更为精细和智能的负载均衡策略。例如，通过对 URL 的分析，将不同类型的请求分发到不同的服务器上；或者根据浏览器的类型和语言，提供不同的内容版本。</p>
+<p>至于适用场景，四层负载均衡适用于对网络协议和数据传输有较高要求的环境，例如金融、电商等需要对数据进行快速、稳定传输的场景。而七层负载均衡则更适合对应用层有较高要求的环境，例如 Web 应用、游戏服务器等需要对请求进行更精细处理和分发的场景。</p>
+<h1 id="注意点"><a class="markdownIt-Anchor" href="#注意点">#</a> 注意点</h1>
+<p>1、OpenSSL 是一个加密软件</p>
+<p>2、crontab 文件为时间域文件，排列方式为：MIN HOUR DAY MONTH DAYOFWEEK COMMAND</p>
+<p>3、cat -n file1 file2 命令是把文件 file1 和 file2 连在一起，然后输出到屏幕上</p>
+<p>4、Python 对文件的写操作方法的是 write ()、writelines ()、 append ()、open ().</p>
+<p>5、do 不是 python 的保留字</p>
+<p>6、elif 不可以单独使用</p>
+<p>7、3+4j 和 3+4J 是 python 的表达式，复数</p>
+<p>8、python 字典中的 “键” 可以是元组</p>
+<p>9、python 中万物都可称为对象</p>
+<p>10、在异常处理结构中，不论是否发生异常，finally 子句中的代码总是会执行的。</p>
+<p>11、字符串编码格式 GBK 使用 2 个字节表示一个汉字，UTF-8 是 3 个字节</p>
+<p>12、Python 用来访问和操作内置数据库 SQLite 的标准库是 sqlite3</p>
+<h2 id="如何在python中实现多线程"><a class="markdownIt-Anchor" href="#如何在python中实现多线程">#</a> 如何在 Python 中实现多线程？</h2>
+<p>1、Python 有一个 multi-threading 包，但是如果你想让 multi-thread 加速你的代码，那么使用它通常不是一个好主意。</p>
+<p>2、 Python 有一个名为 Global Interpreter Lock (GIL) 的结构。 GIL 确保只有一个 “线程” 可以在任何时候执行。一个线程获取 GIL，做一点工作，然后将 GIL 传递到下一个线程。</p>
+<p>3、 这种情况很快发生，因此对于人眼看来，您的线程似乎并行执行，但它们实际上只是轮流使用相同的 CPU 核心。</p>
+<p>所有这些 GIL 传递都增加了执行的开销。这意味着如果您想让代码运行得更快，那么使用线程包通常不是一个好主意。</p>
+<h2 id="这是什么意思-argskwargs我们为什么要用呢"><a class="markdownIt-Anchor" href="#这是什么意思-argskwargs我们为什么要用呢">#</a> 这是什么意思： *args，**kwargs？我们为什么要用呢？</h2>
+<p>我们用<em> args 当我们不确定将多少个参数传递给函数时，或者我们是否要将存储的列表或参数元组传递给函数时。**kwargs 当我们不知道将多少关键字参数传递给函数时，或者它可以用于将字典的值作为关键字参数传递时使用。标识符 args 和 kwargs 是一个约定，你也可以使用</em> bob 和 **billy，但这不是明智之举.</p>
+<h2 id="讲述你如何做系统优化提高系统性能充分利用资源"><a class="markdownIt-Anchor" href="#讲述你如何做系统优化提高系统性能充分利用资源">#</a> 讲述你如何做系统优化，提高系统性能，充分利用资源？</h2>
+<p>系统优化和性能提升是一个复杂的任务，需要综合多种策略和技术。以下是我进行系统优化，提高系统性能，充分利用资源的一些常见做法：</p>
+<ol>
+<li><strong>硬件升级</strong>：提升硬件性能是系统优化的一个重要步骤。例如，如果内存不足，可能引发许多性能问题，如程序运行缓慢、系统崩溃等。因此，根据系统的需求和预算，适时地升级硬件是必要的。</li>
+<li><strong>操作系统优化</strong>：使用适合的操作系统版本，关闭不必要的服务，只安装必要的程序和库，都能提高系统性能。此外，定期清理系统垃圾文件也能保持系统的流畅性。</li>
+<li><strong>磁盘优化</strong>：磁盘是计算机的主要存储设备，对其进行合理的使用和优化能显著提升系统性能。例如，使用 SSD（固态硬盘）可以显著提升系统的启动速度和响应速度。此外，定期清理磁盘上的冗余文件和垃圾数据也能释放磁盘空间，提高系统的运行效率。</li>
+<li><strong>网络优化</strong>：如果你的系统经常需要访问网络，那么网络优化也是非常重要的。使用高速的网络设备，关闭不必要的网络服务，定期清理网络缓存，都能提升网络效率。</li>
+<li><strong>使用高效的软件工具</strong>：使用高效的软件工具可以显著提升工作效率。例如，使用命令行工具代替图形界面的工具可以节省系统资源，使用压缩软件可以减小文件的大小。</li>
+<li><strong>学习和使用最佳实践</strong>：很多资源管理和优化的最佳实践都已经存在，学习和使用这些最佳实践可以避免走弯路。例如，学习如何有效地使用多核处理器，如何配置内存管理等。</li>
+<li><strong>监控和分析系统性能</strong>：使用系统监控工具（如 Linux 的 top 命令、Windows 的任务管理器等）和性能分析工具（如 Windows 的 Performance Monitor 等），可以实时了解系统的运行状态和性能表现，及时发现并解决性能问题。</li>
+<li><strong>定期维护</strong>：定期进行系统维护，包括清理临时文件、整理硬盘碎片、更新系统和软件等，可以帮助系统保持最佳的运行状态。</li>
+<li><strong>合理配置虚拟化技术</strong>：如果使用虚拟化技术（如 Docker 容器、虚拟机等），需要合理配置资源，避免资源浪费或过载。</li>
+<li><strong>节能策略</strong>：根据实际需要配置节能策略，如关闭无用的 USB 设备，设置合适的屏幕亮度，都能帮助节省能源和资源。</li>
+</ol>
+<p>在进行系统优化时，需要综合考虑各种因素，包括硬件资源、软件资源、网络资源、用户需求等。只有在全面理解并考虑这些因素的情况下，才能达到最佳的优化效果。</p>
+<hr>
+<h1 id="必写算法题-出现频率很高"><a class="markdownIt-Anchor" href="#必写算法题-出现频率很高">#</a> 必写算法题 - 出现频率很高</h1>
+<h2 id="动态规划题"><a class="markdownIt-Anchor" href="#动态规划题">#</a> 动态规划题</h2>
+<p>爬楼梯原题：</p>
+<p>假设你在爬楼梯，需要 n 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p>注意：给定 n 是一个正整数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> algorithm.other;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @Author: jun</span></span><br><span class="line"><span class="comment"> * @Date:2023/9/17 12:29</span></span><br><span class="line"><span class="comment"> * @概述：爬楼梯</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">plt001</span> &#123;</span><br><span class="line">    <span class="comment">//1、确定dp数组以及下标的含义</span></span><br><span class="line">    <span class="comment">//dp[i]:爬到第i层楼梯，有dp[i]种方法</span></span><br><span class="line">    <span class="comment">//2、确定递推公式</span></span><br><span class="line">    <span class="comment">//dp[i] = dp[i-1] + dp[i-2]</span></span><br><span class="line">    <span class="comment">//3、dp数组初始化</span></span><br><span class="line">    <span class="comment">//dp[0] = 1,dp[1] = 1 , dp[2] = 2</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">plt</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">1</span> , b = <span class="number">1</span> , c = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            c = a + b;</span><br><span class="line">            a = b;</span><br><span class="line">            b = c;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> c;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">        System.out.println(plt(n));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>出现 - 小米 - 2022 运维开发 - 大白兔奶糖取法</p>
+<p>问题描述:</p>
+<p>假设你有 n 个大白兔奶糖，每次最多拿走一个或者两个，你有多少种不同的方法拿完全部的大白兔奶糖？（注意求解方法的时间复杂度）</p>
+<p>输入描述:</p>
+<p>大白兔奶糖的个数 n (1&lt;=n&lt;=50)</p>
+<p>输出描述:</p>
+<p>拿完全部的大白兔奶糖的方法数</p>
+<p>输入样例:</p>
+<p>2</p>
+<p>输出样例:</p>
+<p>2</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> algorithm.other;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @Author: jun</span></span><br><span class="line"><span class="comment"> * @Date:2023/9/17 12:40</span></span><br><span class="line"><span class="comment"> * @概述：</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">dbt</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">test</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">1</span> , b = <span class="number">1</span>, c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            c = a + b;</span><br><span class="line">            a = b;</span><br><span class="line">            b = c;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> c;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">        System.out.println(test(n));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://github.com/hacker-jun/666.github.io">🌶辣椒炒饭</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://github.com/hacker-jun/666.github.io/2023/09/19/%E7%A7%8B%E6%8B%9B%E5%85%AC%E5%8F%B8%E6%80%BB%E7%BB%93/">https://github.com/hacker-jun/666.github.io/2023/09/19/%E7%A7%8B%E6%8B%9B%E5%85%AC%E5%8F%B8%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">jun</a> 许可协议。转载请注明来自 <a href="https://github.com/hacker-jun/666.github.io" target="_blank">Jun</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/666.github.io/img/f4aa9cd4d88b8eda7d695ba4f1c6cbb0_1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/666.github.io/2023/09/05/%E7%A7%8B%E6%8B%9B%E5%98%8E%E5%98%8E%E4%B9%B1%E6%9D%80/" title="秋招嘎嘎乱杀"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">秋招嘎嘎乱杀</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/666.github.io/img/f4aa9cd4d88b8eda7d695ba4f1c6cbb0_1.jpg" onerror="this.onerror=null;this.src='/666.github.io/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">🌶辣椒炒饭</div><div class="author-info__description">放弃幻想，准备斗争</div></div><div class="card-info-data site-data is-center"><a href="/666.github.io/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/666.github.io/tags/"><div class="headline">标签</div><div class="length-num">30</div></a><a href="/666.github.io/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" href="https://github.com/hacker-jun"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/hacker-jun/" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3050039321@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AC%E5%8F%B8%E6%A6%82%E5%86%B5"><span class="toc-number">1.</span> <span class="toc-text"> 公司概况</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%88%E5%90%88%E4%BF%A1%E6%81%AF"><span class="toc-number">1.1.</span> <span class="toc-text"> 合合信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E5%8F%8B%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text"> 用友软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E5%8D%8E%E8%82%A1%E4%BB%BD"><span class="toc-number">1.3.</span> <span class="toc-text"> 大华股份</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E5%85%B4%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.4.</span> <span class="toc-text"> 中兴软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8En%E4%B8%AA%E4%BA%92%E4%B8%8D%E7%9B%B8%E5%90%8C%E7%9A%84%E7%AC%A6%E5%8F%B7%E8%BF%9B%E8%A1%8C%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81%E8%8B%A5%E7%94%9F%E6%88%90%E7%9A%84%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%85%B1%E6%9C%8935%E4%B8%AA%E7%BB%93%E7%82%B9%E5%88%99n%E7%9A%84%E5%80%BC%E4%B8%BA"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 对于 n 个互不相同的符号进行哈夫曼编码，若生成的哈夫曼树共有 35 个结点，则 n 的值为？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql%E4%B8%ADcount%E5%92%8Csum%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.4.2.</span> <span class="toc-text"> SQL 中 COUNT 和 SUM 的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%A9%E9%B2%B8%E7%A7%91%E6%8A%80"><span class="toc-number">1.5.</span> <span class="toc-text"> 浩鲸科技</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6%E7%9B%B8%E5%85%B3%E7%9A%84%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 与事务控制相关的语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E4%BB%8Eselect%E8%AF%AD%E5%8F%A5%E4%B8%AD%E5%BC%95%E7%94%A8"><span class="toc-number">1.5.2.</span> <span class="toc-text"> 索引为什么不能直接从 select 语句中引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E6%8F%90%E4%BA%A4%E4%BA%8B%E5%8A%A1%E7%9A%84%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%E6%9C%89"><span class="toc-number">1.5.3.</span> <span class="toc-text"> 隐式提交事务的操作命令有？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Earraylist%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8C%87%E5%AE%9A%E5%AE%B9%E9%87%8F%E4%B8%BA10%E5%9C%A8%E6%B7%BB%E5%8A%A0%E7%AC%AC11%E4%B8%AA%E5%85%83%E7%B4%A0%E6%97%B6%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88"><span class="toc-number">1.5.4.</span> <span class="toc-text"> 关于 ArrayList，初始化指定容量为 10，在添加第 11 个元素时，会发生什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%AF%E8%AF%BA%E4%BC%8A%E6%9B%BC%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.5.5.</span> <span class="toc-text"> 冯诺伊曼体系结构的理解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%94%E6%83%B3"><span class="toc-number">1.6.</span> <span class="toc-text"> 联想</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#java-io%E4%BD%93%E7%B3%BB%E4%B8%ADread%E6%96%B9%E6%B3%95%E4%BB%8E%E8%BE%93%E5%85%A5%E6%B5%81%E4%B8%AD%E9%A1%BA%E5%BA%8F%E8%AF%BB%E5%8F%96%E6%BA%90%E4%B8%AD%E7%9A%84%E5%8D%95%E4%B8%AA%E5%AD%97%E8%8A%82%E6%95%B0%E6%8D%AE%E5%A6%82%E6%9E%9C%E6%9C%AA%E8%BE%BE%E5%88%B0%E6%BA%90%E7%9A%84%E6%9C%AB%E5%B0%BE%E8%AF%A5%E6%96%B9%E6%B3%95%E8%BF%94%E5%9B%9E%E4%BB%80%E4%B9%88"><span class="toc-number">1.6.1.</span> <span class="toc-text"> Java IO 体系中，read 方法从输入流中顺序读取源中的单个字节数据，如果未达到源的末尾，该方法返回什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java-io%E4%BD%93%E7%B3%BB%E4%B8%AD%E9%80%9A%E5%B8%B8%E6%83%85%E5%86%B5%E4%B8%8B%E4%BB%A5%E4%B8%8B%E5%93%AA%E4%B8%AA%E7%B1%BB%E5%8F%AF%E7%94%A8%E6%9D%A5%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E4%B8%94%E4%BA%A7%E7%94%9F%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%B0%91%E7%9A%84"><span class="toc-number">1.6.2.</span> <span class="toc-text"> Java IO 体系中，通常情况下以下哪个类可用来读取文件且产生的系统调用可能是最少的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java-io%E6%93%8D%E4%BD%9C%E4%B8%AD%E4%BB%80%E4%B9%88%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E5%B0%86%E7%BC%93%E5%86%B2%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%AB%8B%E5%8D%B3%E5%8F%91%E9%80%81%E5%88%B0%E7%BD%91%E7%BB%9C%E4%B8%AD"><span class="toc-number">1.6.3.</span> <span class="toc-text"> Java IO 操作中，什么方法可以直接将缓冲中的数据立即发送到网络中？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.6.4.</span> <span class="toc-text"> 以下代码执行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java%E4%B8%AD%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E5%88%86%E7%B1%BB"><span class="toc-number">1.6.5.</span> <span class="toc-text"> Java 中的转义字符分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95%E9%94%99%E8%AF%AF%E7%9A%84%E6%98%AF"><span class="toc-number">1.6.6.</span> <span class="toc-text"> 以下初始化的方法错误的是</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java-new%E5%AF%B9%E8%B1%A1%E5%AE%9E%E4%BE%8B%E9%80%9A%E5%B8%B8%E5%AD%98%E5%9C%A8%E4%BB%A5%E4%B8%8B%E5%93%AA%E4%B8%AA%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F"><span class="toc-number">1.6.7.</span> <span class="toc-text"> Java new 对象实例通常存在以下哪个内存区域？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java%E4%B8%AD%E5%85%B3%E4%BA%8Ethis%E5%92%8Csuper%E7%9A%84%E8%AF%B4%E6%B3%95"><span class="toc-number">1.6.8.</span> <span class="toc-text"> Java 中，关于 this () 和 super () 的说法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8java%E4%B8%AD%E6%88%91%E4%BB%AC%E6%89%80%E8%AE%B2%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%8E%A5%E5%8F%A3%E4%B9%A6%E5%86%99%E7%A8%8B%E5%BA%8F%E6%88%96%E8%80%85%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%8E%A5%E5%8F%A3%E6%8C%87%E7%9A%84%E6%98%AF"><span class="toc-number">1.6.9.</span> <span class="toc-text"> 在 Java 中，我们所讲的本地接口书写程序或者本地方法接口指的是</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E6%98%AF"><span class="toc-number">1.6.10.</span> <span class="toc-text"> 以下代码输出结果是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="toc-number">1.6.11.</span> <span class="toc-text"> 类加载问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-number">1.6.12.</span> <span class="toc-text"> 标识符的声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E5%85%B3%E9%94%AE%E8%A6%81%E7%B4%A0"><span class="toc-number">1.6.13.</span> <span class="toc-text"> Java 线程池的关键要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Espringbootapplication%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.6.14.</span> <span class="toc-text"> 关于 @SpringBootApplication 注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Ewait%E5%92%8Csleep%E6%96%B9%E6%B3%95"><span class="toc-number">1.6.15.</span> <span class="toc-text"> 关于 wait () 和 sleep () 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java-%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.6.16.</span> <span class="toc-text"> Java 静态变量和成员变量的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B9%E5%A4%A7%E9%9B%86%E5%9B%A2%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"><span class="toc-number">2.</span> <span class="toc-text"> 方大集团股份有限公司</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A5%87%E5%AE%89%E4%BF%A1%E8%BF%90%E7%BB%B4"><span class="toc-number">3.</span> <span class="toc-text"> 奇安信运维</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E8%AE%BF%E9%97%AE%E7%94%B1%E4%BB%80%E4%B9%88%E5%85%B1%E5%90%8C%E9%99%90%E5%88%B6"><span class="toc-number">3.1.</span> <span class="toc-text"> 对于一个文件的访问，由什么共同限制？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F"><span class="toc-number">3.2.</span> <span class="toc-text"> 一个有向无环图是否存在拓扑排序？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#epoll-et%E6%A8%A1%E5%BC%8F%E5%BF%85%E9%A1%BB%E9%85%8D%E5%90%88non-blocking-io%E4%BD%BF%E7%94%A8%E5%90%97"><span class="toc-number">3.3.</span> <span class="toc-text"> epoll ET 模式必须配合 non-blocking IO 使用吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E4%B8%80%E4%B8%AA%E7%A9%BA%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%A7%E8%A1%8Cumask-333-touch-hello%E5%91%BD%E4%BB%A4%E5%90%8Ehello%E6%96%87%E4%BB%B6%E7%9A%84%E6%9D%83%E9%99%90%E4%B8%BA"><span class="toc-number">3.4.</span> <span class="toc-text"> 在一个空目录下执行 umask 333; touch hello; 命令后，hello 文件的权限为？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8dns%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E6%97%B6%E5%81%87%E8%AE%BEnamed%E8%BF%9B%E7%A8%8B%E5%8F%B7%E6%98%AF53%E5%A6%82%E4%BD%95%E9%80%9A%E7%9F%A5%E8%BF%9B%E7%A8%8B%E9%87%8D%E8%AF%BB%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.5.</span> <span class="toc-text"> 在 DNS 系统测试时，假设 named 进程号是 53，如何通知进程重读配置文件？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql%E4%B8%AD%E7%9A%84%E8%A7%86%E5%9B%BE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">3.6.</span> <span class="toc-text"> mysql 中的视图的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E5%88%A0%E9%99%A4%E5%90%8D%E4%B8%BA-employeeview-%E7%9A%84%E8%A7%86%E5%9B%BE-%E5%BA%94%E4%BD%BF%E7%94%A8%E5%93%AA%E6%9D%A1%E8%AF%AD%E5%8F%A5"><span class="toc-number">3.7.</span> <span class="toc-text"> 数据库中删除名为 EmployeeView 的视图。应使用哪条语句？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%88%AB%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%E8%BF%99%E5%9B%9B%E4%B8%AAinteger-i01-128int-i02-128integer-i03-integervalueof-128integer-i04-new-integer-128%E4%BB%A5%E5%8F%8A%E5%AE%83%E4%BB%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E7%AD%89%E5%85%B3%E7%B3%BB"><span class="toc-number">3.8.</span> <span class="toc-text"> 分别解释一下这四个：Integer i01 &#x3D; -128;int i02 &#x3D; -128;Integer i03 &#x3D;Integer.valueOf (-128);Integer i04 &#x3D; new Integer (-128); 以及它们之间的相等关系.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%8D%8F%E7%A8%8B%E4%BD%A0%E5%AF%B9%E5%AE%83%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="toc-number">3.9.</span> <span class="toc-text"> 关于协程你对它的了解？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8F%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9"><span class="toc-number">3.10.</span> <span class="toc-text"> 协程的优点和缺点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8F%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1"><span class="toc-number">3.11.</span> <span class="toc-text"> 协程间的通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Einode%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="toc-number">3.12.</span> <span class="toc-text"> 关于 inode 的了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5"><span class="toc-number">3.13.</span> <span class="toc-text"> 守护线程的一些概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#go%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E6%94%AF%E6%8C%81"><span class="toc-number">3.14.</span> <span class="toc-text"> go 语言中函数的支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#go%E4%B8%AD%E7%9A%84%E5%88%87%E7%89%87%E7%89%B9%E5%BE%81"><span class="toc-number">3.15.</span> <span class="toc-text"> go 中的切片特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">3.16.</span> <span class="toc-text"> 数据链路层的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%9C%E6%98%AF"><span class="toc-number">3.17.</span> <span class="toc-text"> 代码结果是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E4%B8%AD%E7%9A%84%E7%9C%9F%E6%95%B0%E7%BB%84"><span class="toc-number">3.18.</span> <span class="toc-text"> Java 中的真数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Elinux%E7%9A%84%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-number">3.19.</span> <span class="toc-text"> 关于 Linux 的防火墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iptales%E5%92%8Cfirewalld%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.20.</span> <span class="toc-text"> iptales 和 firewalld 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis%E5%9C%A8%E7%9A%84%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%E4%B8%AD%E5%9C%A8%E6%95%B0%E6%8D%AE%E9%87%8F%E6%9E%81%E5%B0%91%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%9A%84%E4%B8%80%E4%B8%8B%E9%82%A3%E7%A7%8D%E7%BB%93%E6%9E%84%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88"><span class="toc-number">3.21.</span> <span class="toc-text"> redis 在的有序集合中在数据量极少的情况下使用的一下那种结构存储方案？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A6%81%E6%8E%88%E4%BA%88%E7%94%A8%E6%88%B7%E8%AF%BB%E5%8F%96%E8%A1%A8%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9D%83%E9%99%90%E5%BA%94%E4%BD%BF%E7%94%A8%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4"><span class="toc-number">3.22.</span> <span class="toc-text"> 要授予用户读取表中数据的权限，应使用哪个命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#char%E5%92%8Cvarchar%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.23.</span> <span class="toc-text"> char 和 varchar 的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E4%BB%A3%E7%A0%81"><span class="toc-number">3.24.</span> <span class="toc-text"> 返回状态代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#javapjdbjstackjconsole%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">3.25.</span> <span class="toc-text"> javap，jdb，jstack，jconsole 分别是什么</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E7%B1%B3%E9%9B%86%E5%9B%A2"><span class="toc-number">4.</span> <span class="toc-text"> 小米集团</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E6%98%AF"><span class="toc-number">4.1.</span> <span class="toc-text"> 下面的命令返回结果是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Enginx%E9%85%8D%E7%BD%AE%E4%B8%8D%E6%B6%89%E5%8F%8A%E7%A3%81%E7%9B%98%E8%AF%BB%E5%86%99%E7%9A%84%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">4.2.</span> <span class="toc-text"> 关于 nginx 配置不涉及磁盘读写的有哪些？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#grep%E6%9F%A5%E7%9C%8B%E4%BB%A5log%E4%B8%BA%E5%BC%80%E5%A7%8B%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-number">4.3.</span> <span class="toc-text"> grep 查看以 “.log” 为开始的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90"><span class="toc-number">4.4.</span> <span class="toc-text"> 原因分析？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%BA%8E%E5%88%9B%E5%BB%BAlinux%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.5.</span> <span class="toc-text"> 哪个命令可以用于创建 Linux 文件系统？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%90%E6%9C%BA%E5%99%A8%E5%AD%97%E9%95%BF64%E4%BD%8D%E5%86%85%E5%AD%98%E5%AE%B9%E9%87%8F%E4%BD%8D12gb%E6%8C%89%E5%AD%97%E7%BC%96%E5%9D%80%E5%88%99%E5%8F%AF%E5%AF%BB%E5%9D%80%E8%8C%83%E5%9B%B4%E4%B8%BA"><span class="toc-number">4.6.</span> <span class="toc-text"> 某机器字长 64 位，内存容量位 12GB, 按字编址，则可寻址范围为？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4%E6%9D%A5%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8C%85%E5%90%AB%E7%9A%84%E8%A1%8C%E6%95%B0-%E5%AD%97%E6%95%B0-%E5%AD%97%E7%AC%A6%E6%80%BB%E6%95%B0"><span class="toc-number">4.7.</span> <span class="toc-text"> 哪个命令来统计文件中包含的行数、字数、字符总数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%AA%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%BA%8E%E4%BE%A6%E6%B5%8Bosi%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E4%B8%AD7%E5%B1%82%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%81%A5%E5%BA%B7%E7%8A%B6%E6%80%81"><span class="toc-number">4.8.</span> <span class="toc-text"> 哪一个命令可以用于侦测 OSI 网络模型中 7 层服务的健康状态？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%A0%E8%BD%BD%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E7%9A%84%E6%93%8D%E4%BD%9C%E6%9C%89"><span class="toc-number">4.9.</span> <span class="toc-text"> 由操作系统的加载程序执行的操作有？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E4%B8%A4%E5%8F%B0-nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8-n0-%E5%92%8C-n1%E9%9C%80%E8%A6%81%E5%B0%86-n0-%E7%9A%84-nginx-access-log-%E5%90%8C%E6%AD%A5%E5%88%B0-n1-%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%B8%8B%E9%9D%A2%E5%93%AA%E4%BA%9B%E6%9C%8D%E5%8A%A1%E6%9C%89"><span class="toc-number">4.10.</span> <span class="toc-text"> 有两台 nginx 服务器 n0 和 n1，需要将 n0 的 nginx access log 同步到 n1 ，可以使用下面哪些服务有？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E4%BA%8E%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9C%89"><span class="toc-number">4.11.</span> <span class="toc-text"> 用于服务发现的软件有？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%81%E6%9C%89%E5%9C%B0%E5%9D%80"><span class="toc-number">4.12.</span> <span class="toc-text"> 私有地址：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Blinux%E7%B3%BB%E7%BB%9Finode%E7%9A%84%E4%BD%BF%E7%94%A8%E7%8E%87%E5%B9%B6%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="toc-number">4.13.</span> <span class="toc-text"> 查看 Linux 系统 inode 的使用率，并格式化输出？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E4%BA%8B%E5%8A%A1%E5%9C%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E5%AE%8C%E5%85%A8commit%E6%88%96rollback%E5%B1%9E%E4%BA%8Eacid%E4%B8%AD%E7%9A%84%E5%93%AA%E4%B8%80%E4%B8%AA%E5%B1%9E%E6%80%A7"><span class="toc-number">4.14.</span> <span class="toc-text"> 一个事务在数据库中完全 Commit 或 Rollback 属于 ACID 中的哪一个属性？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis%E4%B8%AD%E9%81%8D%E5%8E%86%E6%89%80%E6%9C%89key%E5%93%AA%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AF%B9redis%E6%9C%8D%E5%8A%A1%E5%BD%B1%E5%93%8D%E6%9C%80%E5%B0%8F"><span class="toc-number">4.15.</span> <span class="toc-text"> Redis 中遍历所有 Key，哪种方式对 Redis 服务影响最小？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-%E7%B3%BB%E7%BB%9F%E4%B8%AD%E6%8A%93%E5%8F%96-eth2-%E7%BD%91%E5%8D%A1%E4%B8%8A%E7%BB%8F%E8%BF%87%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85%E5%B7%B2%E7%9F%A5%E5%AF%B9%E6%96%B9-ip-%E4%B8%BA-10136914tcp-%E7%AB%AF%E5%8F%A3%E4%B8%BA80%E5%AF%B9%E5%BA%94%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%BA"><span class="toc-number">4.16.</span> <span class="toc-text"> Linux 系统中，抓取 eth2 网卡上经过的数据包，已知对方 IP 为 10.136.9.14，TCP 端口为 80，对应的命令为？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E5%8F%98%E9%87%8F%E5%90%8D%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%E6%98%AF"><span class="toc-number">4.17.</span> <span class="toc-text"> shell 变量名的命名规则是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-tmp%E7%9B%AE%E5%BD%95%E7%9A%84%E6%9D%83%E9%99%90%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">4.18.</span> <span class="toc-text"> Linux &#39;&#x2F;tmp’目录的权限是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%AA%E4%BA%9B%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%B1%BB%E5%9E%8B%E6%98%AFlinux%E9%BB%98%E8%AE%A4%E6%94%AF%E6%8C%81%E7%9A%84"><span class="toc-number">4.19.</span> <span class="toc-text"> 哪些文件系统类型是 Linux 默认支持的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86http%E5%8D%8F%E8%AE%AE%E4%B8%8D%E6%94%AF%E6%8C%81%E7%9A%84%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E6%9C%89"><span class="toc-number">4.20.</span> <span class="toc-text"> 标准 Http 协议不支持的请求方法有？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E5%93%AA%E7%A7%8D%E6%93%8D%E4%BD%9C%E4%B8%8D%E8%83%BD%E9%80%9A%E8%BF%87binlog%E6%81%A2%E5%A4%8Dbinlog%E6%98%AFrow%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.21.</span> <span class="toc-text"> 在 MySQL 数据库中，哪种操作不能通过 Binlog 恢复，Binlog 是 row 格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-linux-%E8%BF%90%E7%BB%B4%E5%B7%A5%E4%BD%9C%E4%B8%AD%E6%88%91%E4%BB%AC%E7%BB%8F%E5%B8%B8%E7%94%A8-top-%E6%88%96-uptime-%E5%91%BD%E4%BB%A4%E6%9D%A5%E8%A7%82%E5%AF%9F%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B9%B3%E5%9D%87%E8%B4%9F%E8%BD%BDload-average%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9%E5%B9%B3%E5%9D%87%E8%B4%9F%E8%BD%BD%E7%90%86%E8%A7%A3"><span class="toc-number">4.22.</span> <span class="toc-text"> 在 Linux 运维工作中，我们经常用 top 或 uptime 命令来观察系统的平均负载（Load Average），谈谈你对平均负载理解？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%91%E5%B1%B1%E5%8A%9E%E5%85%AC"><span class="toc-number">5.</span> <span class="toc-text"> 金山办公</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">5.1.</span> <span class="toc-text"> Linux 文件权限的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#init%E5%91%BD%E4%BB%A4%E4%BA%86%E8%A7%A3%E5%90%97"><span class="toc-number">5.2.</span> <span class="toc-text"> init 命令了解吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8bash%E4%B8%AD-export%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF"><span class="toc-number">5.3.</span> <span class="toc-text"> 在 bash 中 export 命令的作用是</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E7%9D%80%E5%86%99%E5%87%A0%E7%A7%8D%E6%9F%A5%E7%9C%8Bfile1%E6%96%87%E4%BB%B6%E7%9A%84%E7%AC%AC300-500%E8%A1%8C%E7%9A%84%E5%86%85%E5%AE%B9%E7%9A%84linux%E5%91%BD%E4%BB%A4"><span class="toc-number">5.4.</span> <span class="toc-text"> 试着写几种查看 file1 文件的第 300-500 行的内容的 linux 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#head%E5%92%8Ctail%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">5.5.</span> <span class="toc-text"> head 和 tail 命令的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E7%BB%84%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.6.</span> <span class="toc-text"> python 组合数据类型。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3in1234%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF"><span class="toc-number">5.7.</span> <span class="toc-text"> [3] in [1,2,3,4] 的结果是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E4%B8%AD%E5%AD%97%E5%85%B8%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BB%80%E4%B9%88%E6%96%B9%E6%B3%95%E8%BF%94%E5%9B%9E%E5%AD%97%E5%85%B8%E4%B8%AD%E7%9A%84%E9%94%AE-%E5%80%BC%E5%AF%B9%E5%88%97%E8%A1%A8"><span class="toc-number">5.8.</span> <span class="toc-text"> python 中字典对象的什么方法返回字典中的 “键 - 值对” 列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E4%B8%AD%E5%86%85%E5%BB%BA%E5%BC%82%E5%B8%B8%E7%B1%BB%E7%9A%84%E5%9F%BA%E7%B1%BB%E6%98%AF"><span class="toc-number">5.9.</span> <span class="toc-text"> python 中内建异常类的基类是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E4%B8%AD%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF"><span class="toc-number">5.10.</span> <span class="toc-text"> python 中列表和元组的区别是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%87%BA%E4%BB%8E%E4%BD%A0%E7%94%9F%E6%97%A5%E4%B9%8B%E6%97%A5%E8%B5%B7%E5%88%B0%E4%BB%8A%E5%A4%A9%E4%B8%80%E5%85%B1%E8%BF%87%E4%BA%86%E5%A4%9A%E5%B0%91%E5%A4%A9python-go-shell%E5%9D%87%E5%8F%AF"><span class="toc-number">5.11.</span> <span class="toc-text"> 计算出从你生日之日起到今天一共过了多少天？（python、go、shell 均可）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E5%A6%82%E4%BD%95%E7%9B%91%E8%A7%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%A8%E9%87%8F%E5%92%8C%E7%BD%91%E7%BB%9C%E8%B4%A8%E9%87%8F%E7%94%A8%E5%93%AA%E4%BA%9B%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">5.12.</span> <span class="toc-text"> 你如何监视服务器质量和网络质量？用哪些工具及优缺点？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BD%A0%E7%90%86%E8%A7%A3%E7%9A%84%E8%BF%90%E7%BB%B4%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E4%B8%80%E4%B8%AA%E8%A7%92%E8%89%B2%E5%B9%B6%E8%AF%B4%E8%AF%B4%E8%BF%90%E7%BB%B4%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%BA%94%E8%AF%A5%E5%85%B7%E5%A4%87%E5%93%AA%E4%BA%9B%E6%8A%80%E8%83%BD"><span class="toc-number">5.13.</span> <span class="toc-text"> 说说你理解的运维开发工程师是什么样的一个角色？并说说运维开发工程师应该具备哪些技能？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chmod%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="toc-number">5.14.</span> <span class="toc-text"> chmod 命令的了解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E6%98%93"><span class="toc-number">6.</span> <span class="toc-text"> 网易</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%97%B6%E5%80%99%E4%BB%80%E4%B9%88%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BD%AC%E5%8C%96%E4%B8%8D%E4%BC%9A%E5%8F%91%E7%94%9F"><span class="toc-number">6.1.</span> <span class="toc-text"> Linux 进程调度的时候，什么进程状态转化不会发生？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%9C%89aash"><span class="toc-number">6.2.</span> <span class="toc-text"> 服务器上有 aa.sh,bb.sh, 确认脚本编写语法没有问题，执行 bash aa.sh || bash bb.sh 的时候，是什么意思？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#server%E7%AB%AF%E6%8E%A5%E5%8F%97tcp%E5%8C%85%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%8E%B012345%E9%A1%BA%E5%BA%8F%E4%B8%AD%E4%B8%A2%E4%BA%862%E4%BC%9A%E8%A7%A6%E5%8F%91%E4%BB%80%E4%B9%88"><span class="toc-number">6.3.</span> <span class="toc-text"> server 端接受 TCP 包的时候，发现 1，2，3，4，5 顺序中丢了 2，会触发什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bash%E4%B8%8B%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8D%E8%BF%9B%E7%A8%8B%E7%9A%84pid"><span class="toc-number">6.4.</span> <span class="toc-text"> bash 下如何获得当前进程的 pid？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux%E4%B8%8B%E7%AE%A1%E9%81%93%E6%95%B0%E6%8D%AE%E8%BF%9B%E5%87%BA%E6%98%AF%E5%93%AA%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="toc-number">6.5.</span> <span class="toc-text"> linux 下管道数据进出是哪种模式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E5%9C%A8linux%E4%B8%8B%E6%89%A7%E8%A1%8C%E5%AF%B9%E4%B8%80%E4%B8%AA%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%89%A7%E8%A1%8Cchmod-us-usrlocalbinhtg%E6%9C%89%E4%BB%80%E4%B9%88%E5%89%AF%E4%BD%9C%E7%94%A8"><span class="toc-number">6.6.</span> <span class="toc-text"> 如果在 Linux 下执行对一个可执行文件，执行 chmod u+s &#x2F;usr&#x2F;local&#x2F;bin&#x2F;htg，有什么副作用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E5%8D%A1%E4%B8%A2%E5%8C%85%E6%83%85%E5%86%B5%E5%8F%AF%E4%BB%A5%E7%94%A8%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4%E6%9F%A5%E7%9C%8B"><span class="toc-number">6.7.</span> <span class="toc-text"> 网卡丢包情况可以用哪个命令查看？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%90%AF%E7%94%A8journal%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">6.8.</span> <span class="toc-text"> 文件系统启用 journal 的作用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E8%84%9A%E6%9C%AC%E6%89%BE%E5%87%BAusrsrc%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%80%E6%9C%89%E7%9A%84c%E6%96%87%E4%BB%B6%E7%84%B6%E5%90%8E%E5%B0%86%E8%BF%99%E4%BA%9Bc%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E6%88%90%E4%B8%80%E4%B8%AAtgz%E6%96%87%E4%BB%B6"><span class="toc-number">6.9.</span> <span class="toc-text"> 编写脚本，找出 &#x2F;usr&#x2F;src 目录下所有的.c 文件，然后将这些.c 文件打包成一个 tgz 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%B5%B0%E6%9F%90%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84c%E6%96%87%E4%BB%B6%E5%B9%B6%E5%88%97%E4%B8%BE%E5%87%BA%E6%9D%A5"><span class="toc-number">6.10.</span> <span class="toc-text"> 查走某目录下的.c 文件并列举出来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E9%9D%9E%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E4%B8%8B%E6%8A%93%E5%8F%96%E6%9D%A5%E8%87%AAeth0%E7%9A%84%E7%9B%AE%E6%A0%87%E5%9C%B0%E5%9D%80%E4%B8%BA1231313%E7%9A%8480%E7%AB%AF%E5%8F%A3tcp%E6%95%B0%E6%8D%AE%E5%8C%85%E5%AF%B9%E5%BA%94%E7%9A%84tcpdump%E5%91%BD%E4%BB%A4%E6%80%8E%E4%B9%88%E5%86%99"><span class="toc-number">6.11.</span> <span class="toc-text"> 如何在非图形界面下抓取来自 eth0 的目标地址为 123.13.1.3 的 80 端口 tcp 数据包，对应的 tcpdump 命令怎么写？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%8F%8F%E8%BF%B0%E8%BF%90%E7%BB%B4%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AE%B9%E5%8F%8A%E6%A0%B8%E5%BF%83%E7%9B%AE%E6%A0%87%E4%B8%BA%E8%BE%BE%E6%88%90%E7%9B%AE%E6%A0%87%E6%9C%80%E9%9C%80%E8%A6%81%E5%85%B7%E5%A4%87%E7%9A%84%E5%9B%A0%E7%B4%A0%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">6.12.</span> <span class="toc-text"> 请描述运维的工作内容及核心目标，为达成目标最需要具备的因素有哪些？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B2%E8%BF%B0%E4%B8%80%E4%B8%8B47%E5%B1%82%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">6.13.</span> <span class="toc-text"> 讲述一下 4&#x2F;7 层负载均衡的区别和适用场景。</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-number">7.</span> <span class="toc-text"> 注意点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8python%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">7.1.</span> <span class="toc-text"> 如何在 Python 中实现多线程？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D-argskwargs%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E5%91%A2"><span class="toc-number">7.2.</span> <span class="toc-text"> 这是什么意思： *args，**kwargs？我们为什么要用呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B2%E8%BF%B0%E4%BD%A0%E5%A6%82%E4%BD%95%E5%81%9A%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96%E6%8F%90%E9%AB%98%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E5%85%85%E5%88%86%E5%88%A9%E7%94%A8%E8%B5%84%E6%BA%90"><span class="toc-number">7.3.</span> <span class="toc-text"> 讲述你如何做系统优化，提高系统性能，充分利用资源？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%85%E5%86%99%E7%AE%97%E6%B3%95%E9%A2%98-%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E5%BE%88%E9%AB%98"><span class="toc-number">8.</span> <span class="toc-text"> 必写算法题 - 出现频率很高</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%A2%98"><span class="toc-number">8.1.</span> <span class="toc-text"> 动态规划题</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/666.github.io/2023/09/19/%E7%A7%8B%E6%8B%9B%E5%85%AC%E5%8F%B8%E6%80%BB%E7%BB%93/" title="秋招公司总结">秋招公司总结</a><time datetime="2023-09-19T10:44:27.000Z" title="发表于 2023-09-19 18:44:27">2023-09-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/666.github.io/2023/09/05/%E7%A7%8B%E6%8B%9B%E5%98%8E%E5%98%8E%E4%B9%B1%E6%9D%80/" title="秋招嘎嘎乱杀">秋招嘎嘎乱杀</a><time datetime="2023-09-05T12:24:19.000Z" title="发表于 2023-09-05 20:24:19">2023-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/666.github.io/2023/07/13/%E8%BF%90%E7%BB%B4/" title="运维">运维</a><time datetime="2023-07-13T12:24:32.000Z" title="发表于 2023-07-13 20:24:32">2023-07-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/666.github.io/2023/06/27/Dubbo/" title="Dubbo">Dubbo</a><time datetime="2023-06-26T16:06:55.000Z" title="发表于 2023-06-27 00:06:55">2023-06-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/666.github.io/2023/05/10/%E5%AE%89%E5%8D%93adb/" title="安卓adb">安卓adb</a><time datetime="2023-05-10T11:30:57.000Z" title="发表于 2023-05-10 19:30:57">2023-05-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/666.github.io/img/wallhaven-28rvdg.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2023 By 🌶辣椒炒饭</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">你好，这里是jun's world</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/666.github.io/js/utils.js"></script><script src="/666.github.io/js/main.js"></script><script src="/666.github.io/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="8202199818" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="200" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
